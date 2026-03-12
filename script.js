@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initStatCounters();
   initActiveSectionHighlight();
   initCardHoverTilt();
+  initForms();
 });
 
 
@@ -244,6 +245,184 @@ function initCardHoverTilt() {
   });
 }
 
+
+/* ─── Form Validation ────────────────────────────────────────────
+   Handles the reservation form (#reservationForm) and the
+   contact form (#contactForm). Validates on blur and on submit,
+   shows animated error messages, and displays a success banner.  */
+
+function initForms() {
+
+  /* ── Validators ─────────────────────────────────────────────── */
+  const rules = {
+    required: (v) => v.trim() !== '' || 'This field is required.',
+    email:    (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) || 'Please enter a valid email address.',
+    phone:    (v) => /^[\d\s\+\-\(\)]{7,20}$/.test(v.trim()) || 'Please enter a valid phone number.',
+    guests:   (v) => {
+      const n = parseInt(v, 10);
+      if (isNaN(n) || n < 1) return 'Please enter at least 1 guest.';
+      if (n > 40)             return 'Maximum party size is 40. Contact us for larger events.';
+      return true;
+    },
+    futureDate: (v) => {
+      if (!v) return 'Please select a date.';
+      const selected = new Date(v);
+      const today    = new Date();
+      today.setHours(0, 0, 0, 0);
+      return selected >= today || 'Please choose today or a future date.';
+    },
+    select: (v) => (v && v !== '') || 'Please select an option.',
+    minLength: (min) => (v) =>
+      v.trim().length >= min || `Please enter at least ${min} characters.`,
+  };
+
+  /* ── Field validation helper ────────────────────────────────── */
+  function validateField(field) {
+    const wrap    = field.closest('.form-field');
+    if (!wrap) return true;
+    const errorEl = wrap.querySelector('.form-error');
+    const checks  = field.dataset.validate ? field.dataset.validate.split(' ') : [];
+
+    let msg = null;
+
+    for (const check of checks) {
+      let result;
+      if (check === 'required')   result = rules.required(field.value);
+      else if (check === 'email') result = rules.email(field.value);
+      else if (check === 'phone') result = rules.phone(field.value);
+      else if (check === 'guests') result = rules.guests(field.value);
+      else if (check === 'future-date') result = rules.futureDate(field.value);
+      else if (check === 'select') result = rules.select(field.value);
+      else if (check.startsWith('min:')) {
+        const min = parseInt(check.split(':')[1], 10);
+        result = rules.minLength(min)(field.value);
+      }
+
+      if (result !== true) { msg = result; break; }
+    }
+
+    if (msg) {
+      wrap.classList.remove('is-valid');
+      wrap.classList.add('is-error');
+      if (errorEl) errorEl.textContent = msg;
+      return false;
+    } else {
+      wrap.classList.remove('is-error');
+      // Only show green tick if the field actually has a value
+      if (field.value.trim() !== '') wrap.classList.add('is-valid');
+      if (errorEl) errorEl.textContent = '';
+      return true;
+    }
+  }
+
+  /* ── Wire up a form ─────────────────────────────────────────── */
+  function wireForm(formId, successId) {
+    const form    = document.getElementById(formId);
+    const success = document.getElementById(successId);
+    if (!form) return;
+
+    const fields = form.querySelectorAll('[data-validate]');
+
+    // Validate on blur for each field
+    fields.forEach(field => {
+      field.addEventListener('blur', () => validateField(field));
+      // Clear error state on first keystroke after an error
+      field.addEventListener('input', () => {
+        const wrap = field.closest('.form-field');
+        if (wrap && wrap.classList.contains('is-error')) {
+          validateField(field);
+        }
+      });
+    });
+
+    // Submit handler
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      let allValid = true;
+      fields.forEach(field => {
+        if (!validateField(field)) allValid = false;
+      });
+
+      if (!allValid) {
+        // Scroll first error into view
+        const firstError = form.querySelector('.form-field.is-error');
+        if (firstError) {
+          firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          firstError.querySelector('input, select, textarea')?.focus();
+        }
+        return;
+      }
+
+      // Simulate async submission
+      const submitBtn = form.querySelector('.form-submit-btn');
+      if (submitBtn) submitBtn.classList.add('is-loading');
+
+      setTimeout(() => {
+        if (submitBtn) submitBtn.classList.remove('is-loading');
+        form.style.display = 'none';
+        if (success) success.hidden = false;
+        success?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 1200);
+    });
+  }
+
+  /* ── Reservation form ───────────────────────────────────────── */
+  // Add validation attributes to reservation form fields
+  const resFields = {
+    'res-name':    'required',
+    'res-email':   'required email',
+    'res-phone':   'required phone',
+    'res-guests':  'required guests',
+    'res-date':    'required future-date',
+    'res-time':    'required select',
+  };
+  Object.entries(resFields).forEach(([id, rules]) => {
+    const el = document.getElementById(id);
+    if (el) el.dataset.validate = rules;
+  });
+
+  // Set date min to today
+  const dateInput = document.getElementById('res-date');
+  if (dateInput) {
+    const today = new Date().toISOString().split('T')[0];
+    dateInput.min = today;
+  }
+
+  wireForm('reservationForm', 'resFormSuccess');
+
+  /* ── Contact form ───────────────────────────────────────────── */
+  const ctFields = {
+    'ct-name':    'required',
+    'ct-email':   'required email',
+    'ct-topic':   'required select',
+    'ct-message': 'required min:10',
+  };
+  Object.entries(ctFields).forEach(([id, rules]) => {
+    const el = document.getElementById(id);
+    if (el) el.dataset.validate = rules;
+  });
+
+  // Character counter for contact message
+  const msgEl    = document.getElementById('ct-message');
+  const countEl  = document.getElementById('ctMessageCount');
+  const MAX_CHARS = 1000;
+  if (msgEl && countEl) {
+    const updateCount = () => {
+      const len = msgEl.value.length;
+      countEl.textContent = `${len} / ${MAX_CHARS}`;
+      countEl.classList.toggle('near-limit', len >= MAX_CHARS * 0.85 && len < MAX_CHARS);
+      countEl.classList.toggle('at-limit',   len >= MAX_CHARS);
+      if (len > MAX_CHARS) {
+        msgEl.value = msgEl.value.slice(0, MAX_CHARS);
+      }
+    };
+    msgEl.addEventListener('input', updateCount);
+    updateCount();
+  }
+
+  wireForm('contactForm', 'ctFormSuccess');
+}
 
 /* ─── Page transition on internal link click ─────────────────── */
 (function initPageTransition() {
