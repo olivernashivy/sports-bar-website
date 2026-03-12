@@ -26,6 +26,7 @@ window.i18n = (function () {
       'nav.about':      'Über uns',
       'nav.menu':       'Speisekarte',
       'nav.res':        'Reservierungen',
+      'nav.gallery':    'Galerie',
       'nav.careers':    'Karriere',
       'nav.contact':    'Kontakt',
       'nav.book':       'Tisch buchen',
@@ -57,6 +58,17 @@ window.i18n = (function () {
       'about.img1.alt': 'Arena 90 Sports Bar Innenraum mit HD-Bildschirmen',
       'about.img2.alt': 'Craft-Biere und Cocktails an der Bar',
       'about.img3.alt': 'Fußballfans beim Spielen',
+
+      /* Gallery section */
+      'gallery.label':    'Impressionen',
+      'gallery.title':    'Erleben Sie die <span class="text-accent">Arena 90</span>',
+      'gallery.subtitle': 'Großartige Spiele, unvergessliche Momente — bei uns ist immer was los.',
+      'gallery.cap1':     'Public Viewing — Matchday',
+      'gallery.cap2':     'Craft-Biere vom Fass',
+      'gallery.cap3':     'Spieltag-Burger',
+      'gallery.cap4':     '40+ HD-Bildschirme im Haus',
+      'gallery.cap5':     'Signature Cocktails',
+      'gallery.cap6':     'Private Events & Feiern',
 
       /* Menu section */
       'menu.label':     'Essen & Trinken',
@@ -203,6 +215,7 @@ window.i18n = (function () {
       'nav.about':   'About',
       'nav.menu':    'Menu',
       'nav.res':     'Reservations',
+      'nav.gallery': 'Gallery',
       'nav.careers': 'Careers',
       'nav.contact': 'Contact',
       'nav.book':    'Book a Table',
@@ -232,6 +245,17 @@ window.i18n = (function () {
       'about.img1.alt': 'Arena 90 Sports Bar interior with HD screens',
       'about.img2.alt': 'Craft beers and cocktails at the bar',
       'about.img3.alt': 'Soccer fans watching the game',
+
+      /* Gallery section */
+      'gallery.label':    'Gallery',
+      'gallery.title':    'Experience the <span class="text-accent">Arena 90</span>',
+      'gallery.subtitle': 'Epic games, unforgettable moments — there\'s always something happening here.',
+      'gallery.cap1':     'Public Viewing — Match Day',
+      'gallery.cap2':     'Craft Beers on Tap',
+      'gallery.cap3':     'Game-Day Burger',
+      'gallery.cap4':     '40+ HD Screens Throughout',
+      'gallery.cap5':     'Signature Cocktails',
+      'gallery.cap6':     'Private Events & Parties',
 
       'menu.label':    'Food & Drinks',
       'menu.title':    'The <span class="text-accent">Menu</span>',
