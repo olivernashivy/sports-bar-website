@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Arena 90 Sports Bar Menu — Burgers, wings, craft beers, cocktails and game-day favorites." />
+  <title>Menu — Arena 90 Sports Bar</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ─── Navigation ──────────────────────────────────────────── -->
+  <nav class="nav scrolled" id="nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Arena 90 Sports Bar Home">
+        <div class="nav-logo-icon">A90</div>
+        <span class="nav-logo-text">Arena <span>90</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="menu.html" style="color:var(--color-accent)">Menu</a></li>
+        <li><a href="index.html#reservation">Reservations</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li>
+          <a href="mailto:reservations@arena90bar.com?subject=Table Reservation"
+             class="btn btn-primary nav-cta">
+            <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+            Book a Table
+          </a>
+        </li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+
+  <!-- ─── Subpage Hero ─────────────────────────────────────────── -->
+  <section class="subpage-hero" aria-label="Menu hero">
+    <div class="subpage-hero-bg"></div>
+    <div class="container subpage-hero-content">
+      <span class="section-label" data-aos="fade-up">Food &amp; Drinks</span>
+      <h1 class="section-title" data-aos="fade-up" data-aos-delay="80"
+          style="font-size: clamp(3rem,8vw,6rem);">
+        Our <span class="text-accent">Menu</span>
+      </h1>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="160"
+         style="margin:0 auto; text-align:center;">
+        Game-day food and drinks crafted to keep your energy up through every minute of play.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ─── Menu Content ─────────────────────────────────────────── -->
+  <section class="section menu-page-section" aria-labelledby="menu-page-title">
+    <div class="container">
+
+      <h2 class="visually-hidden" id="menu-page-title">Full Menu</h2>
+
+      <div class="menu-categories">
+
+        <!-- ── Burgers & Mains ── -->
+        <div class="menu-category" data-aos="fade-up" data-aos-delay="0">
+          <div class="menu-category-header">
+            <i class="fa-solid fa-burger" aria-hidden="true"></i>
+            <h3>Burgers &amp; Mains</h3>
+          </div>
+          <div class="menu-items-list">
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>The Arena Classic</h4>
+                <p>Double smash patty, cheddar, lettuce, pickles, arena sauce</p>
+              </div>
+              <span class="menu-item-price">$16</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Bacon Blitz Burger</h4>
+                <p>Crispy bacon, Swiss cheese, caramelised onions, mustard mayo</p>
+              </div>
+              <span class="menu-item-price">$18</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Spicy Kick Burger</h4>
+                <p>Jalapeño, pepper jack, chipotle aioli, crispy shallots</p>
+              </div>
+              <span class="menu-item-price">$17</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Grilled Chicken Sandwich</h4>
+                <p>Chargrilled chicken breast, avocado, slaw, honey mustard</p>
+              </div>
+              <span class="menu-item-price">$15</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Veggie Stack</h4>
+                <p>Portobello mushroom, roasted peppers, halloumi, pesto</p>
+              </div>
+              <span class="menu-item-price">$14</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Wings & Sharers ── -->
+        <div class="menu-category" data-aos="fade-up" data-aos-delay="80">
+          <div class="menu-category-header">
+            <i class="fa-solid fa-drumstick-bite" aria-hidden="true"></i>
+            <h3>Wings &amp; Sharers</h3>
+          </div>
+          <div class="menu-items-list">
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Classic Buffalo Wings</h4>
+                <p>6 or 12 wings, house buffalo sauce, blue cheese dip</p>
+              </div>
+              <span class="menu-item-price">$13</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Honey &amp; Garlic Wings</h4>
+                <p>Sticky glaze, sesame seeds, spring onion</p>
+              </div>
+              <span class="menu-item-price">$13</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Loaded Nachos</h4>
+                <p>Tortilla chips, melted cheese, jalapeños, salsa, sour cream, guacamole</p>
+              </div>
+              <span class="menu-item-price">$12</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Sharer Platter</h4>
+                <p>12 wings, nachos, onion rings, mozzarella sticks, 3 dips</p>
+              </div>
+              <span class="menu-item-price">$38</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Loaded Fries</h4>
+                <p>Crinkle fries, pulled pork, cheese sauce, pickled onions</p>
+              </div>
+              <span class="menu-item-price">$11</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Sides ── -->
+        <div class="menu-category" data-aos="fade-up" data-aos-delay="160">
+          <div class="menu-category-header">
+            <i class="fa-solid fa-bowl-food" aria-hidden="true"></i>
+            <h3>Sides</h3>
+          </div>
+          <div class="menu-items-list">
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Skin-On Fries</h4>
+                <p>Sea salt and rosemary</p>
+              </div>
+              <span class="menu-item-price">$5</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Onion Rings</h4>
+                <p>Beer-battered, ranch dip</p>
+              </div>
+              <span class="menu-item-price">$6</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Mozzarella Sticks</h4>
+                <p>Golden fried, marinara sauce</p>
+              </div>
+              <span class="menu-item-price">$7</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Coleslaw</h4>
+                <p>Creamy homemade coleslaw</p>
+              </div>
+              <span class="menu-item-price">$4</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Mac &amp; Cheese</h4>
+                <p>Creamy three-cheese blend, breadcrumb top</p>
+              </div>
+              <span class="menu-item-price">$8</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Craft Beers ── -->
+        <div class="menu-category" data-aos="fade-up" data-aos-delay="0">
+          <div class="menu-category-header">
+            <i class="fa-solid fa-beer-mug-empty" aria-hidden="true"></i>
+            <h3>Craft Beers</h3>
+          </div>
+          <div class="menu-items-list">
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Arena 90 Lager</h4>
+                <p>Our house craft lager — crisp and refreshing, 4.5% ABV</p>
+              </div>
+              <span class="menu-item-price">$7</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Stadium IPA</h4>
+                <p>Hoppy American IPA, citrus notes, 6.2% ABV</p>
+              </div>
+              <span class="menu-item-price">$8</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Dark Horse Stout</h4>
+                <p>Rich, velvety stout, chocolate and coffee notes, 5.8% ABV</p>
+              </div>
+              <span class="menu-item-price">$8</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Wheat Haze</h4>
+                <p>Unfiltered wheat beer, light and citrusy, 4.8% ABV</p>
+              </div>
+              <span class="menu-item-price">$8</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Rotating Guest Tap</h4>
+                <p>Ask your server for today's featured craft selection</p>
+              </div>
+              <span class="menu-item-price">$9</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Cocktails ── -->
+        <div class="menu-category" data-aos="fade-up" data-aos-delay="80">
+          <div class="menu-category-header">
+            <i class="fa-solid fa-martini-glass-citrus" aria-hidden="true"></i>
+            <h3>Cocktails</h3>
+          </div>
+          <div class="menu-items-list">
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Kickoff Margarita</h4>
+                <p>Tequila, triple sec, fresh lime, salted rim</p>
+              </div>
+              <span class="menu-item-price">$13</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Half-Time Mule</h4>
+                <p>Vodka, ginger beer, lime, mint, copper mug</p>
+              </div>
+              <span class="menu-item-price">$12</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Negroni Rosso</h4>
+                <p>Gin, Campari, sweet vermouth, orange peel</p>
+              </div>
+              <span class="menu-item-price">$14</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Whisky Sour</h4>
+                <p>Bourbon, lemon juice, simple syrup, egg white foam</p>
+              </div>
+              <span class="menu-item-price">$14</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Passion Fruit Spritz</h4>
+                <p>Aperol, prosecco, passion fruit, soda, orange slice</p>
+              </div>
+              <span class="menu-item-price">$13</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Non-Alcoholic ── -->
+        <div class="menu-category" data-aos="fade-up" data-aos-delay="160">
+          <div class="menu-category-header">
+            <i class="fa-solid fa-glass-water" aria-hidden="true"></i>
+            <h3>Non-Alcoholic</h3>
+          </div>
+          <div class="menu-items-list">
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Fresh Lemonades</h4>
+                <p>Classic, strawberry, or mint — made fresh to order</p>
+              </div>
+              <span class="menu-item-price">$5</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Mocktail Flight</h4>
+                <p>Three signature alcohol-free cocktails, 4 oz each</p>
+              </div>
+              <span class="menu-item-price">$10</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Craft Sodas</h4>
+                <p>Rotating selection of premium small-batch sodas</p>
+              </div>
+              <span class="menu-item-price">$4</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Iced Teas</h4>
+                <p>Classic, peach, or raspberry iced tea</p>
+              </div>
+              <span class="menu-item-price">$4</span>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Energy Drinks</h4>
+                <p>Selection of premium energy drinks, on ice</p>
+              </div>
+              <span class="menu-item-price">$5</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.menu-categories -->
+
+      <!-- Disclaimer -->
+      <p data-aos="fade-up" style="text-align:center; font-size:0.82rem; color:var(--color-text-dim); max-width:560px; margin:0 auto;">
+        All prices exclude tax. Menu items are subject to seasonal availability.
+        Please inform your server of any dietary requirements or allergies.
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- ─── Footer ───────────────────────────────────────────────── -->
+  <footer class="footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">
+          &copy; 2025 <span>Arena 90 Sports Bar</span>. All rights reserved.
+        </p>
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="index.html">Home</a>
+          <a href="menu.html">Menu</a>
+          <a href="careers.html">Careers</a>
+          <a href="imprint.html">Imprint / Legal</a>
+          <a href="mailto:info@arena90bar.com">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- AOS Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <!-- Main Script -->
+  <script src="script.js"></script>
+
+</body>
+</html>

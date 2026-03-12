@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Arena 90 Sports Bar — Watch the game, enjoy great food, and celebrate together. Reserve your table today." />
+  <title>Arena 90 Sports Bar</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- AOS – Animate On Scroll -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       NAVIGATION
+  ════════════════════════════════════════════════════════════ -->
+  <nav class="nav" id="nav" aria-label="Main navigation">
+    <div class="nav-inner">
+
+      <!-- Logo -->
+      <a href="index.html" class="nav-logo" aria-label="Arena 90 Sports Bar Home">
+        <div class="nav-logo-icon">A90</div>
+        <span class="nav-logo-text">Arena <span>90</span></span>
+      </a>
+
+      <!-- Navigation Links -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#reservation">Reservations</a></li>
+        <li><a href="#careers">Careers</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <a href="mailto:reservations@arena90bar.com?subject=Table Reservation"
+             class="btn btn-primary nav-cta">
+            <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+            Book a Table
+          </a>
+        </li>
+      </ul>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </nav>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       HERO SECTION
+  ════════════════════════════════════════════════════════════ -->
+  <section class="hero" id="hero" aria-label="Hero">
+
+    <!-- Background image + overlay -->
+    <div class="hero-bg" role="img" aria-label="Sports bar atmosphere background"></div>
+
+    <div class="container hero-content">
+
+      <!-- Eyebrow label -->
+      <p class="hero-eyebrow">
+        The Ultimate Sports Experience
+      </p>
+
+      <!-- Main headline -->
+      <h1 class="hero-title">
+        Arena 90
+        <span class="line-accent">Sports Bar</span>
+      </h1>
+
+      <!-- Sub-headline -->
+      <p class="hero-subtitle">
+        Watch the Game. Enjoy Great Food.<br>Celebrate Together.
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="hero-actions">
+        <a href="mailto:reservations@arena90bar.com?subject=Table Reservation"
+           class="btn btn-primary btn-lg">
+          <i class="fa-regular fa-calendar-check" aria-hidden="true"></i>
+          Reserve a Table
+        </a>
+        <a href="#menu" class="btn btn-secondary btn-lg">
+          <i class="fa-solid fa-utensils" aria-hidden="true"></i>
+          View Menu
+        </a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="hero-scroll" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+
+    <!-- Stats bar -->
+    <div class="hero-stats" aria-label="Key facts">
+      <div class="hero-stat">
+        <span class="hero-stat-number">40+</span>
+        <span class="hero-stat-label">HD Screens</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-number">120+</span>
+        <span class="hero-stat-label">Menu Items</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-number">30+</span>
+        <span class="hero-stat-label">Craft Beers</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-number">300</span>
+        <span class="hero-stat-label">Seats Available</span>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       ABOUT SECTION
+  ════════════════════════════════════════════════════════════ -->
+  <section class="section about" id="about" aria-labelledby="about-title">
+    <div class="container">
+      <div class="about-grid">
+
+        <!-- Text Column -->
+        <div class="about-text">
+          <span class="section-label" data-aos="fade-up">Our Story</span>
+          <h2 class="section-title" id="about-title" data-aos="fade-up" data-aos-delay="80">
+            Where Fans Come<br>
+            <span class="text-accent">Together</span>
+          </h2>
+          <p class="section-subtitle" data-aos="fade-up" data-aos-delay="150">
+            Arena 90 Sports Bar is a place where fans gather to watch the biggest
+            games in a lively atmosphere. We combine great food, cold drinks, and
+            high-definition screens to create the perfect sports experience.
+          </p>
+          <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200"
+             style="margin-top:16px;">
+            Whether you're here for the championship final, a midweek fixture, or
+            just to enjoy a cold one after work — Arena 90 is your home away from
+            home. Our passion for sport and hospitality is woven into every part
+            of the experience.
+          </p>
+
+          <!-- Feature highlights -->
+          <div class="about-features" data-aos="fade-up" data-aos-delay="260">
+            <div class="about-feature">
+              <div class="about-feature-icon">
+                <i class="fa-solid fa-tv" aria-hidden="true"></i>
+              </div>
+              <h4>Live Broadcasts</h4>
+              <p>Every match, every league — streamed live on 40+ HD screens.</p>
+            </div>
+            <div class="about-feature">
+              <div class="about-feature-icon">
+                <i class="fa-solid fa-burger" aria-hidden="true"></i>
+              </div>
+              <h4>Game-Day Food</h4>
+              <p>Burgers, wings, loaded fries and more to fuel the passion.</p>
+            </div>
+            <div class="about-feature">
+              <div class="about-feature-icon">
+                <i class="fa-solid fa-beer-mug-empty" aria-hidden="true"></i>
+              </div>
+              <h4>Craft Drinks</h4>
+              <p>30+ craft beers, cocktails, and premium spirits on tap.</p>
+            </div>
+            <div class="about-feature">
+              <div class="about-feature-icon">
+                <i class="fa-solid fa-people-group" aria-hidden="true"></i>
+              </div>
+              <h4>Private Events</h4>
+              <p>Book a section for your group — birthdays, viewings, and more.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image Grid Column -->
+        <div class="about-images" data-aos="fade-left" data-aos-delay="100">
+
+          <!-- Large top image: Bar interior -->
+          <div class="about-img about-img-main">
+            <img
+              src="https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?w=900&auto=format&fit=crop&q=80"
+              alt="Arena 90 Sports Bar interior with multiple HD screens"
+              loading="lazy"
+            />
+            <div class="about-img-overlay"></div>
+          </div>
+
+          <!-- Bottom-left: Drinks -->
+          <div class="about-img">
+            <img
+              src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=500&auto=format&fit=crop&q=80"
+              alt="Craft beers and cocktails at the bar"
+              loading="lazy"
+            />
+            <div class="about-img-overlay"></div>
+          </div>
+
+          <!-- Bottom-right: Fans watching sport -->
+          <div class="about-img">
+            <img
+              src="https://images.unsplash.com/photo-1543269664-76bc3997d9ea?w=500&auto=format&fit=crop&q=80"
+              alt="Sports fans watching a live match"
+              loading="lazy"
+            />
+            <div class="about-img-overlay"></div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       MENU SECTION
+  ════════════════════════════════════════════════════════════ -->
+  <section class="section menu-section" id="menu" aria-labelledby="menu-title">
+    <div class="container">
+
+      <div class="menu-intro">
+        <span class="section-label" data-aos="fade-up">Food &amp; Drinks</span>
+        <h2 class="section-title" id="menu-title" data-aos="fade-up" data-aos-delay="80">
+          The <span class="text-accent">Menu</span>
+        </h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="150">
+          Our menu includes burgers, wings, craft beers, cocktails, and classic
+          game-day favorites — made fresh and served fast so you never miss a moment.
+        </p>
+      </div>
+
+      <!-- Category preview cards -->
+      <div class="menu-cards">
+
+        <div class="menu-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="menu-card-icon">
+            <i class="fa-solid fa-burger" aria-hidden="true"></i>
+          </div>
+          <h3>Burgers &amp; Mains</h3>
+          <p>Smash burgers, loaded sandwiches, and hearty mains to satisfy every appetite.</p>
+        </div>
+
+        <div class="menu-card" data-aos="fade-up" data-aos-delay="80">
+          <div class="menu-card-icon">
+            <i class="fa-solid fa-drumstick-bite" aria-hidden="true"></i>
+          </div>
+          <h3>Wings &amp; Sharers</h3>
+          <p>Classic buffalo wings, loaded nachos, and sharing platters built for the crowd.</p>
+        </div>
+
+        <div class="menu-card" data-aos="fade-up" data-aos-delay="160">
+          <div class="menu-card-icon">
+            <i class="fa-solid fa-beer-mug-empty" aria-hidden="true"></i>
+          </div>
+          <h3>Craft Beers</h3>
+          <p>30+ rotating taps featuring local and international craft beers and lagers.</p>
+        </div>
+
+        <div class="menu-card" data-aos="fade-up" data-aos-delay="240">
+          <div class="menu-card-icon">
+            <i class="fa-solid fa-martini-glass-citrus" aria-hidden="true"></i>
+          </div>
+          <h3>Cocktails &amp; Spirits</h3>
+          <p>Signature cocktails, premium spirits, and a full cocktail menu crafted for game night.</p>
+        </div>
+
+      </div>
+
+      <!-- CTA to full menu -->
+      <div data-aos="fade-up" data-aos-delay="100">
+        <a href="menu.html" class="btn btn-primary btn-lg">
+          <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          View Full Menu
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       RESERVATION SECTION
+  ════════════════════════════════════════════════════════════ -->
+  <section class="section reservation" id="reservation" aria-labelledby="reservation-title">
+
+    <!-- Background with image -->
+    <div class="reservation-bg" role="img" aria-label="Restaurant ambiance background"></div>
+
+    <div class="container">
+      <div class="reservation-inner">
+
+        <!-- Left: Text -->
+        <div class="reservation-text" data-aos="fade-right">
+          <span class="section-label">Book Your Spot</span>
+          <h2 class="section-title" id="reservation-title">
+            Reserve Your<br>
+            <span class="text-accent">Table</span>
+          </h2>
+          <p class="section-subtitle">
+            Book your table in advance and enjoy the best seat in the house
+            during major matches. Secure your spot for the big game today.
+          </p>
+
+          <!-- Perks -->
+          <div class="reservation-perks">
+            <div class="reservation-perk">
+              <div class="reservation-perk-icon">
+                <i class="fa-solid fa-star" aria-hidden="true"></i>
+              </div>
+              <div class="reservation-perk-text">
+                <h4>Priority Seating</h4>
+                <p>Reserved tables get prime viewing positions in front of the main screens.</p>
+              </div>
+            </div>
+            <div class="reservation-perk">
+              <div class="reservation-perk-icon">
+                <i class="fa-solid fa-bell-concierge" aria-hidden="true"></i>
+              </div>
+              <div class="reservation-perk-text">
+                <h4>Dedicated Table Service</h4>
+                <p>Your own server so you can focus on the game, not queuing at the bar.</p>
+              </div>
+            </div>
+            <div class="reservation-perk">
+              <div class="reservation-perk-icon">
+                <i class="fa-solid fa-gift" aria-hidden="true"></i>
+              </div>
+              <div class="reservation-perk-text">
+                <h4>Welcome Drinks</h4>
+                <p>Complimentary welcome drinks for groups of 6 or more with advance booking.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Reservation card -->
+        <div class="reservation-card" data-aos="fade-left" data-aos-delay="100">
+          <h3 class="reservation-card-title">Make a Reservation</h3>
+          <p class="reservation-card-desc">
+            Send us your preferred date, time, and party size and we will
+            confirm your booking within 2 hours.
+          </p>
+
+          <!-- Opening hours quick info -->
+          <div class="reservation-card-info">
+            <div class="reservation-card-info-row">
+              <i class="fa-regular fa-clock" aria-hidden="true"></i>
+              <span>Mon–Thu: 3 PM – 1 AM</span>
+            </div>
+            <div class="reservation-card-info-row">
+              <i class="fa-regular fa-clock" aria-hidden="true"></i>
+              <span>Fri–Sat: 12 PM – 3 AM</span>
+            </div>
+            <div class="reservation-card-info-row">
+              <i class="fa-regular fa-clock" aria-hidden="true"></i>
+              <span>Sunday: 12 PM – 12 AM</span>
+            </div>
+            <div class="reservation-card-info-row">
+              <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+              <span>14 Stadium Road, Sports Quarter</span>
+            </div>
+          </div>
+
+          <div class="reservation-card-divider"></div>
+
+          <!-- Primary CTA -->
+          <a href="mailto:reservations@arena90bar.com?subject=Table Reservation"
+             class="btn btn-primary reservation-btn" aria-label="Send reservation email">
+            <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+            Email to Reserve
+          </a>
+
+          <!-- Alternative: phone -->
+          <p style="text-align:center; margin-top:16px; font-size:0.82rem; color:var(--color-text-dim);">
+            Or call us:
+            <a href="tel:+15551234567" style="color:var(--color-accent); margin-left:4px;">
+              +1 (555) 123-4567
+            </a>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       CAREERS SECTION
+  ════════════════════════════════════════════════════════════ -->
+  <section class="section careers" id="careers" aria-labelledby="careers-title">
+    <div class="container">
+      <div class="careers-inner">
+
+        <!-- Image Column -->
+        <div class="careers-image" data-aos="fade-right">
+          <img
+            src="https://images.unsplash.com/photo-1605522561233-768ad7a8fabf?w=700&auto=format&fit=crop&q=80"
+            alt="Friendly bar staff serving guests at Arena 90"
+            loading="lazy"
+          />
+        </div>
+
+        <!-- Text Column -->
+        <div class="careers-text" data-aos="fade-left" data-aos-delay="100">
+          <span class="section-label">Join Our Team</span>
+          <h2 class="section-title" id="careers-title">
+            Work Where the<br>
+            <span class="text-accent">Action Is</span>
+          </h2>
+          <p class="section-subtitle">
+            We are always looking for passionate people to join our team in
+            hospitality and service. If you thrive in a fast-paced, energetic
+            environment and love sport, we want to hear from you.
+          </p>
+
+          <!-- Open role tags -->
+          <div class="careers-roles">
+            <span class="careers-role-tag">Bar Staff</span>
+            <span class="careers-role-tag">Kitchen Team</span>
+            <span class="careers-role-tag">Front of House</span>
+            <span class="careers-role-tag">Event Coordinator</span>
+            <span class="careers-role-tag">Manager</span>
+            <span class="careers-role-tag">Security</span>
+          </div>
+
+          <a href="careers.html" class="btn btn-primary">
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            View Careers
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       CONTACT SECTION
+  ════════════════════════════════════════════════════════════ -->
+  <section class="section contact" id="contact" aria-labelledby="contact-title">
+    <div class="container">
+
+      <div style="margin-bottom:60px;" data-aos="fade-up">
+        <span class="section-label">Get In Touch</span>
+        <h2 class="section-title" id="contact-title">
+          Contact <span class="text-accent">Us</span>
+        </h2>
+      </div>
+
+      <div class="contact-grid">
+
+        <!-- Brand + social column -->
+        <div class="contact-brand" data-aos="fade-up" data-aos-delay="0">
+          <a href="index.html" class="nav-logo" style="margin-bottom:20px; display:inline-flex;">
+            <div class="nav-logo-icon">A90</div>
+            <span class="nav-logo-text">Arena <span>90</span></span>
+          </a>
+          <p>
+            Arena 90 Sports Bar — your premier destination for live sports,
+            craft drinks, and great food. Bringing fans together since 2018.
+          </p>
+          <!-- Social links -->
+          <div class="contact-social" aria-label="Social media links">
+            <a href="#" aria-label="Follow us on Facebook">
+              <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+            </a>
+            <a href="#" aria-label="Follow us on Instagram">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="#" aria-label="Follow us on X (Twitter)">
+              <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="#" aria-label="Follow us on TikTok">
+              <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+            </a>
+            <a href="#" aria-label="Subscribe on YouTube">
+              <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact details column -->
+        <div class="contact-group" data-aos="fade-up" data-aos-delay="100">
+          <h4>Contact Details</h4>
+          <div class="contact-list">
+
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+              </div>
+              <div class="contact-item-text">
+                <span class="contact-item-label">Address</span>
+                <span class="contact-item-value">
+                  14 Stadium Road, Sports Quarter<br>
+                  New York, NY 10001
+                </span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+              </div>
+              <div class="contact-item-text">
+                <span class="contact-item-label">Phone</span>
+                <span class="contact-item-value">
+                  <a href="tel:+15551234567">+1 (555) 123-4567</a>
+                </span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+              </div>
+              <div class="contact-item-text">
+                <span class="contact-item-label">General Inquiries</span>
+                <span class="contact-item-value">
+                  <a href="mailto:info@arena90bar.com">info@arena90bar.com</a>
+                </span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Email directory column -->
+        <div class="contact-group" data-aos="fade-up" data-aos-delay="200">
+          <h4>Email Directory</h4>
+          <div class="contact-list">
+
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+              </div>
+              <div class="contact-item-text">
+                <span class="contact-item-label">Reservations</span>
+                <span class="contact-item-value">
+                  <a href="mailto:reservations@arena90bar.com">reservations@arena90bar.com</a>
+                </span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <i class="fa-solid fa-champagne-glasses" aria-hidden="true"></i>
+              </div>
+              <div class="contact-item-text">
+                <span class="contact-item-label">Events</span>
+                <span class="contact-item-value">
+                  <a href="mailto:events@arena90bar.com">events@arena90bar.com</a>
+                </span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+              </div>
+              <div class="contact-item-text">
+                <span class="contact-item-label">Careers</span>
+                <span class="contact-item-value">
+                  <a href="mailto:careers@arena90bar.com">careers@arena90bar.com</a>
+                </span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <i class="fa-solid fa-headset" aria-hidden="true"></i>
+              </div>
+              <div class="contact-item-text">
+                <span class="contact-item-label">Support</span>
+                <span class="contact-item-value">
+                  <a href="mailto:support@arena90bar.com">support@arena90bar.com</a>
+                </span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════════════════════ -->
+  <footer class="footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-inner">
+
+        <p class="footer-copy">
+          &copy; 2025 <span>Arena 90 Sports Bar</span>. All rights reserved.
+        </p>
+
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="index.html">Home</a>
+          <a href="menu.html">Menu</a>
+          <a href="careers.html">Careers</a>
+          <a href="imprint.html">Imprint / Legal</a>
+          <a href="mailto:info@arena90bar.com">Contact</a>
+        </nav>
+
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- AOS Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <!-- Main Script -->
+  <script src="script.js"></script>
+
+</body>
+</html>
