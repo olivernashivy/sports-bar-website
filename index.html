@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Arena 90 Sports Bar — Watch the game, enjoy great food, and celebrate together. Reserve your table today." />
-  <title>Arena 90 Sports Bar</title>
+  <meta name="description" content="Arena 90 Sports Bar München — Das Spiel erleben, großartiges Essen genießen, gemeinsam feiern. Jetzt Tisch reservieren." />
+  <title>Arena 90 Sports Bar – München</title>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,32 +25,41 @@
   <!-- ═══════════════════════════════════════════════════════════
        NAVIGATION
   ════════════════════════════════════════════════════════════ -->
-  <nav class="nav" id="nav" aria-label="Main navigation">
+  <nav class="nav" id="nav" data-i18n-aria="aria.nav" aria-label="Hauptnavigation">
     <div class="nav-inner">
 
       <!-- Logo -->
-      <a href="index.html" class="nav-logo" aria-label="Arena 90 Sports Bar Home">
+      <a href="index.html" class="nav-logo" aria-label="Arena 90 Sports Bar">
         <div class="nav-logo-icon">A90</div>
         <span class="nav-logo-text">Arena <span>90</span></span>
       </a>
 
       <!-- Navigation Links -->
       <ul class="nav-links" id="navLinks">
-        <li><a href="#about">About</a></li>
-        <li><a href="#menu">Menu</a></li>
-        <li><a href="#reservation">Reservations</a></li>
-        <li><a href="#careers">Careers</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about"       data-i18n="nav.about">Über uns</a></li>
+        <li><a href="#menu"        data-i18n="nav.menu">Speisekarte</a></li>
+        <li><a href="#reservation" data-i18n="nav.res">Reservierungen</a></li>
+        <li><a href="#careers"     data-i18n="nav.careers">Karriere</a></li>
+        <li><a href="#contact"     data-i18n="nav.contact">Kontakt</a></li>
         <li>
           <a href="#reservation" class="btn btn-primary nav-cta">
             <i class="fa-regular fa-calendar" aria-hidden="true"></i>
-            Book a Table
+            <span data-i18n="nav.book">Tisch buchen</span>
           </a>
         </li>
       </ul>
 
+      <!-- Language Toggle -->
+      <div class="lang-toggle" id="langToggle" role="group"
+           data-i18n-aria="aria.lang" aria-label="Sprache / Language">
+        <button class="lang-btn" data-lang="de" aria-pressed="true">DE</button>
+        <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+
       <!-- Mobile Menu Toggle -->
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <button class="nav-toggle" id="navToggle"
+              data-i18n-aria="aria.toggle" aria-label="Navigation ein-/ausblenden"
+              aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
@@ -62,66 +71,71 @@
 
   <!-- ═══════════════════════════════════════════════════════════
        HERO SECTION
+       Background: soccer fans / match atmosphere
   ════════════════════════════════════════════════════════════ -->
   <section class="hero" id="hero" aria-label="Hero">
 
-    <!-- Background image + overlay -->
-    <div class="hero-bg" role="img" aria-label="Sports bar atmosphere background"></div>
+    <!-- Background: soccer crowd celebration atmosphere -->
+    <div class="hero-bg"
+         role="img"
+         data-i18n-aria="aria.hero"
+         aria-label="Hintergrundbild der Sports Bar"
+         style="background-image:
+           linear-gradient(135deg, rgba(13,13,13,0.93) 0%, rgba(20,10,5,0.85) 50%, rgba(13,13,13,0.88) 100%),
+           url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1920&auto=format&fit=crop&q=80');
+           background-size: cover; background-position: center;">
+    </div>
 
     <div class="container hero-content">
 
-      <!-- Eyebrow label -->
       <p class="hero-eyebrow">
-        The Ultimate Sports Experience
+        <span data-i18n="hero.eyebrow">Das ultimative Sporterlebnis</span>
       </p>
 
-      <!-- Main headline -->
       <h1 class="hero-title">
         Arena 90
         <span class="line-accent">Sports Bar</span>
       </h1>
 
-      <!-- Sub-headline -->
-      <p class="hero-subtitle">
-        Watch the Game. Enjoy Great Food.<br>Celebrate Together.
+      <p class="hero-subtitle" data-i18n="hero.subtitle">
+        Das Spiel erleben. Großartiges Essen genießen. Gemeinsam feiern.
       </p>
 
-      <!-- CTA Buttons -->
       <div class="hero-actions">
         <a href="#reservation" class="btn btn-primary btn-lg">
           <i class="fa-regular fa-calendar-check" aria-hidden="true"></i>
-          Reserve a Table
+          <span data-i18n="hero.cta.res">Tisch reservieren</span>
         </a>
         <a href="#menu" class="btn btn-secondary btn-lg">
           <i class="fa-solid fa-utensils" aria-hidden="true"></i>
-          View Menu
+          <span data-i18n="hero.cta.menu">Speisekarte</span>
         </a>
       </div>
     </div>
 
     <!-- Scroll indicator -->
     <div class="hero-scroll" aria-hidden="true">
-      <span>Scroll</span>
+      <span data-i18n="hero.scroll">Scrollen</span>
       <div class="scroll-line"></div>
     </div>
 
     <!-- Stats bar -->
-    <div class="hero-stats" aria-label="Key facts">
+    <div class="hero-stats" aria-label="Kennzahlen">
       <div class="hero-stat">
         <span class="hero-stat-number">40+</span>
-        <span class="hero-stat-label">HD Screens</span>
+        <span class="hero-stat-label" data-i18n="hero.stat.screens">HD-Bildschirme</span>
       </div>
       <div class="hero-stat">
         <span class="hero-stat-number">120+</span>
-        <span class="hero-stat-label">Menu Items</span>
+        <span class="hero-stat-label" data-i18n="hero.stat.items">Menüpunkte</span>
       </div>
       <div class="hero-stat">
         <span class="hero-stat-number">30+</span>
-        <span class="hero-stat-label">Craft Beers</span>
+        <span class="hero-stat-label" data-i18n="hero.stat.beers">Craft-Biere</span>
       </div>
       <div class="hero-stat">
         <span class="hero-stat-number">300</span>
-        <span class="hero-stat-label">Seats Available</span>
+        <span class="hero-stat-label" data-i18n="hero.stat.seats">Sitzplätze</span>
       </div>
     </div>
 
@@ -137,85 +151,91 @@
 
         <!-- Text Column -->
         <div class="about-text">
-          <span class="section-label" data-aos="fade-up">Our Story</span>
-          <h2 class="section-title" id="about-title" data-aos="fade-up" data-aos-delay="80">
-            Where Fans Come<br>
-            <span class="text-accent">Together</span>
+          <span class="section-label" data-aos="fade-up"
+                data-i18n="about.label">Unsere Geschichte</span>
+          <h2 class="section-title" id="about-title"
+              data-aos="fade-up" data-aos-delay="80"
+              data-i18n-html="about.title">
+            Wo Fans<br><span class="text-accent">zusammenkommen</span>
           </h2>
-          <p class="section-subtitle" data-aos="fade-up" data-aos-delay="150">
-            Arena 90 Sports Bar is a place where fans gather to watch the biggest
-            games in a lively atmosphere. We combine great food, cold drinks, and
-            high-definition screens to create the perfect sports experience.
+          <p class="section-subtitle" data-aos="fade-up" data-aos-delay="150"
+             data-i18n="about.p1">
+            Die Arena 90 Sports Bar ist ein Ort, an dem Fans zusammenkommen, um die größten Spiele in einer lebhaften Atmosphäre zu erleben.
           </p>
           <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200"
-             style="margin-top:16px;">
-            Whether you're here for the championship final, a midweek fixture, or
-            just to enjoy a cold one after work — Arena 90 is your home away from
-            home. Our passion for sport and hospitality is woven into every part
-            of the experience.
+             style="margin-top:16px;" data-i18n="about.p2">
+            Ob beim Champions-League-Finale, am Bundesliga-Spieltag oder einfach nach der Arbeit auf ein kühles Bier — die Arena 90 ist Ihr zweites Zuhause.
           </p>
 
           <!-- Feature highlights -->
           <div class="about-features" data-aos="fade-up" data-aos-delay="260">
+
             <div class="about-feature">
               <div class="about-feature-icon">
                 <i class="fa-solid fa-tv" aria-hidden="true"></i>
               </div>
-              <h4>Live Broadcasts</h4>
-              <p>Every match, every league — streamed live on 40+ HD screens.</p>
+              <h4 data-i18n="about.feat1.title">Live-Übertragungen</h4>
+              <p data-i18n="about.feat1.text">Jedes Spiel, jede Liga — live auf über 40 HD-Bildschirmen.</p>
             </div>
+
             <div class="about-feature">
               <div class="about-feature-icon">
                 <i class="fa-solid fa-burger" aria-hidden="true"></i>
               </div>
-              <h4>Game-Day Food</h4>
-              <p>Burgers, wings, loaded fries and more to fuel the passion.</p>
+              <h4 data-i18n="about.feat2.title">Spieltag-Küche</h4>
+              <p data-i18n="about.feat2.text">Burger, Wings, Pommes und mehr — Fuel für leidenschaftliche Fans.</p>
             </div>
+
             <div class="about-feature">
               <div class="about-feature-icon">
                 <i class="fa-solid fa-beer-mug-empty" aria-hidden="true"></i>
               </div>
-              <h4>Craft Drinks</h4>
-              <p>30+ craft beers, cocktails, and premium spirits on tap.</p>
+              <h4 data-i18n="about.feat3.title">Craft-Getränke</h4>
+              <p data-i18n="about.feat3.text">30+ Craft-Biere, Cocktails und Premium-Spirituosen vom Fass.</p>
             </div>
+
             <div class="about-feature">
               <div class="about-feature-icon">
                 <i class="fa-solid fa-people-group" aria-hidden="true"></i>
               </div>
-              <h4>Private Events</h4>
-              <p>Book a section for your group — birthdays, viewings, and more.</p>
+              <h4 data-i18n="about.feat4.title">Private Events</h4>
+              <p data-i18n="about.feat4.text">Bereich buchen für Geburtstage, Public Viewings und Firmenevents.</p>
             </div>
+
           </div>
         </div>
 
         <!-- Image Grid Column -->
         <div class="about-images" data-aos="fade-left" data-aos-delay="100">
 
-          <!-- Large top image: Bar interior -->
+          <!-- Main: Sports bar interior with soccer on screens -->
           <div class="about-img about-img-main">
             <img
               src="https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?w=900&auto=format&fit=crop&q=80"
-              alt="Arena 90 Sports Bar interior with multiple HD screens"
+              data-i18n-title="about.img1.alt"
+              alt="Arena 90 Sports Bar Innenraum mit HD-Bildschirmen"
               loading="lazy"
             />
             <div class="about-img-overlay"></div>
           </div>
 
-          <!-- Bottom-left: Drinks -->
+          <!-- Beer / Drinks -->
           <div class="about-img">
             <img
               src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=500&auto=format&fit=crop&q=80"
-              alt="Craft beers and cocktails at the bar"
+              data-i18n-title="about.img2.alt"
+              alt="Craft-Biere und Cocktails an der Bar"
               loading="lazy"
             />
             <div class="about-img-overlay"></div>
           </div>
 
-          <!-- Bottom-right: Fans watching sport -->
+          <!-- Soccer fans watching live match -->
           <div class="about-img">
             <img
-              src="https://images.unsplash.com/photo-1543269664-76bc3997d9ea?w=500&auto=format&fit=crop&q=80"
-              alt="Sports fans watching a live match"
+              src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=500&auto=format&fit=crop&q=80"
+              data-i18n-title="about.img3.alt"
+              alt="Fußballfans beim Spielen"
               loading="lazy"
             />
             <div class="about-img-overlay"></div>
@@ -235,58 +255,59 @@
     <div class="container">
 
       <div class="menu-intro">
-        <span class="section-label" data-aos="fade-up">Food &amp; Drinks</span>
-        <h2 class="section-title" id="menu-title" data-aos="fade-up" data-aos-delay="80">
-          The <span class="text-accent">Menu</span>
+        <span class="section-label" data-aos="fade-up"
+              data-i18n="menu.label">Essen &amp; Trinken</span>
+        <h2 class="section-title" id="menu-title"
+            data-aos="fade-up" data-aos-delay="80"
+            data-i18n-html="menu.title">
+          Die <span class="text-accent">Speisekarte</span>
         </h2>
-        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="150">
-          Our menu includes burgers, wings, craft beers, cocktails, and classic
-          game-day favorites — made fresh and served fast so you never miss a moment.
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="150"
+           data-i18n="menu.subtitle">
+          Unsere Speisekarte umfasst Burger, Wings, Craft-Biere, Cocktails und klassische Spieltag-Favoriten — frisch und schnell serviert.
         </p>
       </div>
 
-      <!-- Category preview cards -->
       <div class="menu-cards">
 
         <div class="menu-card" data-aos="fade-up" data-aos-delay="0">
           <div class="menu-card-icon">
             <i class="fa-solid fa-burger" aria-hidden="true"></i>
           </div>
-          <h3>Burgers &amp; Mains</h3>
-          <p>Smash burgers, loaded sandwiches, and hearty mains to satisfy every appetite.</p>
+          <h3 data-i18n="menu.c1.title">Burger &amp; Hauptgerichte</h3>
+          <p data-i18n="menu.c1.text">Smash Burger, belegte Sandwiches und herzhafte Gerichte für jeden Appetit.</p>
         </div>
 
         <div class="menu-card" data-aos="fade-up" data-aos-delay="80">
           <div class="menu-card-icon">
             <i class="fa-solid fa-drumstick-bite" aria-hidden="true"></i>
           </div>
-          <h3>Wings &amp; Sharers</h3>
-          <p>Classic buffalo wings, loaded nachos, and sharing platters built for the crowd.</p>
+          <h3 data-i18n="menu.c2.title">Wings &amp; Sharing</h3>
+          <p data-i18n="menu.c2.text">Klassische Buffalo Wings, Loaded Nachos und Sharing-Platten für die Runde.</p>
         </div>
 
         <div class="menu-card" data-aos="fade-up" data-aos-delay="160">
           <div class="menu-card-icon">
             <i class="fa-solid fa-beer-mug-empty" aria-hidden="true"></i>
           </div>
-          <h3>Craft Beers</h3>
-          <p>30+ rotating taps featuring local and international craft beers and lagers.</p>
+          <h3 data-i18n="menu.c3.title">Craft-Biere</h3>
+          <p data-i18n="menu.c3.text">30+ rotierende Zapfhähne mit lokalen und internationalen Craft-Bieren.</p>
         </div>
 
         <div class="menu-card" data-aos="fade-up" data-aos-delay="240">
           <div class="menu-card-icon">
             <i class="fa-solid fa-martini-glass-citrus" aria-hidden="true"></i>
           </div>
-          <h3>Cocktails &amp; Spirits</h3>
-          <p>Signature cocktails, premium spirits, and a full cocktail menu crafted for game night.</p>
+          <h3 data-i18n="menu.c4.title">Cocktails &amp; Spirits</h3>
+          <p data-i18n="menu.c4.text">Signature Cocktails, Premium-Spirituosen und eine vollständige Cocktailkarte.</p>
         </div>
 
       </div>
 
-      <!-- CTA to full menu -->
       <div data-aos="fade-up" data-aos-delay="100">
         <a href="menu.html" class="btn btn-primary btn-lg">
           <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-          View Full Menu
+          <span data-i18n="menu.cta">Vollständige Speisekarte</span>
         </a>
       </div>
 
@@ -296,106 +317,131 @@
 
   <!-- ═══════════════════════════════════════════════════════════
        RESERVATION SECTION
+       Background: soccer stadium aerial shot
   ════════════════════════════════════════════════════════════ -->
   <section class="section reservation" id="reservation" aria-labelledby="reservation-title">
 
-    <!-- Background with image -->
-    <div class="reservation-bg" role="img" aria-label="Restaurant ambiance background"></div>
+    <!-- Background: stadium green field from above -->
+    <div class="reservation-bg"
+         style="background-image:
+           linear-gradient(135deg, rgba(13,13,13,0.97) 0%, rgba(30,20,5,0.94) 60%, rgba(13,13,13,0.97) 100%),
+           url('https://images.unsplash.com/photo-1431324155629-1a6dae1434d5?w=1600&auto=format&fit=crop&q=80');
+           background-size: cover; background-position: center;">
+    </div>
 
     <div class="container">
       <div class="reservation-inner">
 
-        <!-- Left: Text -->
+        <!-- Left: Text + perks -->
         <div class="reservation-text" data-aos="fade-right">
-          <span class="section-label">Book Your Spot</span>
-          <h2 class="section-title" id="reservation-title">
-            Reserve Your<br>
-            <span class="text-accent">Table</span>
+          <span class="section-label" data-i18n="res.label">Ihren Platz sichern</span>
+          <h2 class="section-title" id="reservation-title"
+              data-i18n-html="res.title">
+            Tisch<br><span class="text-accent">reservieren</span>
           </h2>
-          <p class="section-subtitle">
-            Book your table in advance and enjoy the best seat in the house
-            during major matches. Secure your spot for the big game today.
+          <p class="section-subtitle" data-i18n="res.subtitle">
+            Reservieren Sie Ihren Tisch im Voraus und genießen Sie den besten Platz beim großen Spiel.
           </p>
 
-          <!-- Perks -->
           <div class="reservation-perks">
+
             <div class="reservation-perk">
               <div class="reservation-perk-icon">
                 <i class="fa-solid fa-star" aria-hidden="true"></i>
               </div>
               <div class="reservation-perk-text">
-                <h4>Priority Seating</h4>
-                <p>Reserved tables get prime viewing positions in front of the main screens.</p>
+                <h4 data-i18n="res.p1.title">Prioritätssitzplätze</h4>
+                <p data-i18n="res.p1.text">Reservierte Tische erhalten die besten Positionen vor den Hauptbildschirmen.</p>
               </div>
             </div>
+
             <div class="reservation-perk">
               <div class="reservation-perk-icon">
                 <i class="fa-solid fa-bell-concierge" aria-hidden="true"></i>
               </div>
               <div class="reservation-perk-text">
-                <h4>Dedicated Table Service</h4>
-                <p>Your own server so you can focus on the game, not queuing at the bar.</p>
+                <h4 data-i18n="res.p2.title">Dedizierter Tischservice</h4>
+                <p data-i18n="res.p2.text">Ihr eigener Kellner, damit Sie sich voll aufs Spiel konzentrieren können.</p>
               </div>
             </div>
+
             <div class="reservation-perk">
               <div class="reservation-perk-icon">
                 <i class="fa-solid fa-gift" aria-hidden="true"></i>
               </div>
               <div class="reservation-perk-text">
-                <h4>Welcome Drinks</h4>
-                <p>Complimentary welcome drinks for groups of 6 or more with advance booking.</p>
+                <h4 data-i18n="res.p3.title">Willkommensgetränke</h4>
+                <p data-i18n="res.p3.text">Kostenlose Begrüßungsgetränke für Gruppen ab 6 Personen bei Voranmeldung.</p>
               </div>
             </div>
+
           </div>
         </div>
 
         <!-- Right: Reservation form card -->
         <div class="reservation-card" data-aos="fade-left" data-aos-delay="100">
-          <h3 class="reservation-card-title">Make a Reservation</h3>
-          <p class="reservation-card-desc">
-            Fill in your details and we'll confirm your table within 2 hours.
+          <h3 class="reservation-card-title" data-i18n="res.card.title">Reservierung anfragen</h3>
+          <p class="reservation-card-desc" data-i18n="res.card.desc">
+            Füllen Sie Ihre Daten aus — wir bestätigen Ihren Tisch innerhalb von 2 Stunden.
           </p>
 
-          <form class="res-form" id="reservationForm" novalidate aria-label="Table reservation form">
+          <form class="res-form" id="reservationForm" novalidate
+                aria-label="Tischreservierung">
 
             <!-- Row: name + email -->
             <div class="form-row">
               <div class="form-field">
-                <label class="form-label" for="res-name">Full Name <span class="form-required">*</span></label>
+                <label class="form-label" for="res-name">
+                  <span data-i18n="res.label.name">Vollständiger Name</span>
+                  <span class="form-required">*</span>
+                </label>
                 <div class="form-input-wrap">
                   <i class="fa-regular fa-user form-input-icon" aria-hidden="true"></i>
                   <input class="form-input" type="text" id="res-name" name="name"
-                         placeholder="Jane Smith" autocomplete="name" />
+                         data-i18n-placeholder="res.ph.name"
+                         placeholder="Max Mustermann" autocomplete="name" />
                 </div>
                 <span class="form-error" role="alert" aria-live="polite"></span>
               </div>
               <div class="form-field">
-                <label class="form-label" for="res-email">Email <span class="form-required">*</span></label>
+                <label class="form-label" for="res-email">
+                  <span data-i18n="res.label.email">E-Mail-Adresse</span>
+                  <span class="form-required">*</span>
+                </label>
                 <div class="form-input-wrap">
                   <i class="fa-regular fa-envelope form-input-icon" aria-hidden="true"></i>
                   <input class="form-input" type="email" id="res-email" name="email"
-                         placeholder="jane@example.com" autocomplete="email" />
+                         data-i18n-placeholder="res.ph.email"
+                         placeholder="max@beispiel.de" autocomplete="email" />
                 </div>
                 <span class="form-error" role="alert" aria-live="polite"></span>
               </div>
             </div>
 
-            <!-- Row: phone + party size -->
+            <!-- Row: phone + guests -->
             <div class="form-row">
               <div class="form-field">
-                <label class="form-label" for="res-phone">Phone <span class="form-required">*</span></label>
+                <label class="form-label" for="res-phone">
+                  <span data-i18n="res.label.phone">Telefonnummer</span>
+                  <span class="form-required">*</span>
+                </label>
                 <div class="form-input-wrap">
                   <i class="fa-solid fa-phone form-input-icon" aria-hidden="true"></i>
                   <input class="form-input" type="tel" id="res-phone" name="phone"
-                         placeholder="+1 (555) 000-0000" autocomplete="tel" />
+                         data-i18n-placeholder="res.ph.phone"
+                         placeholder="+49 89 000 0000" autocomplete="tel" />
                 </div>
                 <span class="form-error" role="alert" aria-live="polite"></span>
               </div>
               <div class="form-field">
-                <label class="form-label" for="res-guests">Guests <span class="form-required">*</span></label>
+                <label class="form-label" for="res-guests">
+                  <span data-i18n="res.label.guests">Anzahl Gäste</span>
+                  <span class="form-required">*</span>
+                </label>
                 <div class="form-input-wrap">
                   <i class="fa-solid fa-people-group form-input-icon" aria-hidden="true"></i>
                   <input class="form-input" type="number" id="res-guests" name="guests"
+                         data-i18n-placeholder="res.ph.guests"
                          placeholder="2" min="1" max="40" />
                 </div>
                 <span class="form-error" role="alert" aria-live="polite"></span>
@@ -405,7 +451,10 @@
             <!-- Row: date + time -->
             <div class="form-row">
               <div class="form-field">
-                <label class="form-label" for="res-date">Date <span class="form-required">*</span></label>
+                <label class="form-label" for="res-date">
+                  <span data-i18n="res.label.date">Datum</span>
+                  <span class="form-required">*</span>
+                </label>
                 <div class="form-input-wrap">
                   <i class="fa-regular fa-calendar form-input-icon" aria-hidden="true"></i>
                   <input class="form-input" type="date" id="res-date" name="date" />
@@ -413,22 +462,25 @@
                 <span class="form-error" role="alert" aria-live="polite"></span>
               </div>
               <div class="form-field">
-                <label class="form-label" for="res-time">Time <span class="form-required">*</span></label>
+                <label class="form-label" for="res-time">
+                  <span data-i18n="res.label.time">Uhrzeit</span>
+                  <span class="form-required">*</span>
+                </label>
                 <div class="form-input-wrap">
                   <i class="fa-regular fa-clock form-input-icon" aria-hidden="true"></i>
                   <select class="form-input form-select" id="res-time" name="time">
-                    <option value="">Select a time</option>
-                    <option>12:00 PM</option><option>12:30 PM</option>
-                    <option>1:00 PM</option><option>1:30 PM</option>
-                    <option>2:00 PM</option><option>2:30 PM</option>
-                    <option>3:00 PM</option><option>3:30 PM</option>
-                    <option>4:00 PM</option><option>4:30 PM</option>
-                    <option>5:00 PM</option><option>5:30 PM</option>
-                    <option>6:00 PM</option><option>6:30 PM</option>
-                    <option>7:00 PM</option><option>7:30 PM</option>
-                    <option>8:00 PM</option><option>8:30 PM</option>
-                    <option>9:00 PM</option><option>9:30 PM</option>
-                    <option>10:00 PM</option><option>10:30 PM</option>
+                    <option value="" data-i18n="res.ph.time">Uhrzeit wählen</option>
+                    <option>12:00</option><option>12:30</option>
+                    <option>13:00</option><option>13:30</option>
+                    <option>14:00</option><option>14:30</option>
+                    <option>15:00</option><option>15:30</option>
+                    <option>16:00</option><option>16:30</option>
+                    <option>17:00</option><option>17:30</option>
+                    <option>18:00</option><option>18:30</option>
+                    <option>19:00</option><option>19:30</option>
+                    <option>20:00</option><option>20:30</option>
+                    <option>21:00</option><option>21:30</option>
+                    <option>22:00</option><option>22:30</option>
                   </select>
                 </div>
                 <span class="form-error" role="alert" aria-live="polite"></span>
@@ -437,44 +489,71 @@
 
             <!-- Occasion -->
             <div class="form-field">
-              <label class="form-label" for="res-occasion">Occasion</label>
+              <label class="form-label" for="res-occasion">
+                <span data-i18n="res.label.occasion">Anlass</span>
+              </label>
               <div class="form-input-wrap">
                 <i class="fa-solid fa-champagne-glasses form-input-icon" aria-hidden="true"></i>
                 <select class="form-input form-select" id="res-occasion" name="occasion">
-                  <option value="">Select an occasion (optional)</option>
-                  <option>Regular Visit</option>
-                  <option>Match Day Viewing</option>
-                  <option>Birthday Celebration</option>
-                  <option>Corporate Event</option>
-                  <option>Private Party</option>
-                  <option>Other</option>
+                  <option value="" data-i18n="res.ph.occasion">Anlass wählen (optional)</option>
+                  <option data-i18n="res.occ.regular">Normaler Besuch</option>
+                  <option data-i18n="res.occ.matchday">Bundesliga / Public Viewing</option>
+                  <option data-i18n="res.occ.birthday">Geburtstagsfeier</option>
+                  <option data-i18n="res.occ.corporate">Firmenveranstaltung</option>
+                  <option data-i18n="res.occ.party">Private Party</option>
+                  <option data-i18n="res.occ.other">Sonstiges</option>
                 </select>
               </div>
             </div>
 
             <!-- Special requests -->
             <div class="form-field">
-              <label class="form-label" for="res-notes">Special Requests</label>
+              <label class="form-label" for="res-notes">
+                <span data-i18n="res.label.notes">Besondere Wünsche</span>
+              </label>
               <div class="form-input-wrap">
                 <i class="fa-regular fa-comment form-input-icon form-input-icon--top" aria-hidden="true"></i>
                 <textarea class="form-input form-textarea" id="res-notes" name="notes"
-                          placeholder="Dietary requirements, seating preferences, accessibility needs…" rows="3"></textarea>
+                          data-i18n-placeholder="res.ph.notes"
+                          placeholder="Ernährungsanforderungen, Sitzwünsche, Barrierefreiheit…"
+                          rows="3"></textarea>
               </div>
             </div>
 
             <!-- Submit -->
             <button type="submit" class="btn btn-primary reservation-btn form-submit-btn">
               <i class="fa-regular fa-calendar-check" aria-hidden="true"></i>
-              <span class="btn-label">Reserve My Table</span>
+              <span class="btn-label" data-i18n="res.submit">Tisch reservieren</span>
               <span class="btn-spinner" aria-hidden="true"></span>
             </button>
 
-            <!-- Success message (hidden until valid submit) -->
+            <!-- Separator / phone alternative -->
+            <div class="reservation-card-divider"></div>
+            <div class="reservation-card-info">
+              <div class="reservation-card-info-row">
+                <i class="fa-regular fa-clock" aria-hidden="true"></i>
+                <span data-i18n="res.hours.1">Mo–Do: 15:00 – 01:00 Uhr</span>
+              </div>
+              <div class="reservation-card-info-row">
+                <i class="fa-regular fa-clock" aria-hidden="true"></i>
+                <span data-i18n="res.hours.2">Fr–Sa: 12:00 – 03:00 Uhr</span>
+              </div>
+              <div class="reservation-card-info-row">
+                <i class="fa-regular fa-clock" aria-hidden="true"></i>
+                <span data-i18n="res.hours.3">So: 12:00 – 00:00 Uhr</span>
+              </div>
+              <div class="reservation-card-info-row">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                <span data-i18n="res.address">Stadionstraße 90, 80809 München</span>
+              </div>
+            </div>
+
+            <!-- Success message -->
             <div class="form-success" id="resFormSuccess" role="status" aria-live="polite" hidden>
               <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
               <div>
-                <strong>Reservation received!</strong>
-                <p>We'll confirm your table at Arena 90 within 2 hours.</p>
+                <strong data-i18n="res.success.title">Reservierung eingegangen!</strong>
+                <p data-i18n="res.success.text">Wir bestätigen Ihren Tisch in der Arena 90 innerhalb von 2 Stunden.</p>
               </div>
             </div>
 
@@ -493,41 +572,39 @@
     <div class="container">
       <div class="careers-inner">
 
-        <!-- Image Column -->
+        <!-- Image: bar staff at Arena 90 -->
         <div class="careers-image" data-aos="fade-right">
           <img
             src="https://images.unsplash.com/photo-1605522561233-768ad7a8fabf?w=700&auto=format&fit=crop&q=80"
-            alt="Friendly bar staff serving guests at Arena 90"
+            data-i18n-title="careers.img.alt"
+            alt="Freundliches Barpersonal in der Arena 90"
             loading="lazy"
           />
         </div>
 
         <!-- Text Column -->
         <div class="careers-text" data-aos="fade-left" data-aos-delay="100">
-          <span class="section-label">Join Our Team</span>
-          <h2 class="section-title" id="careers-title">
-            Work Where the<br>
-            <span class="text-accent">Action Is</span>
+          <span class="section-label" data-i18n="careers.label">Unser Team</span>
+          <h2 class="section-title" id="careers-title"
+              data-i18n-html="careers.title">
+            Arbeiten wo die<br><span class="text-accent">Action ist</span>
           </h2>
-          <p class="section-subtitle">
-            We are always looking for passionate people to join our team in
-            hospitality and service. If you thrive in a fast-paced, energetic
-            environment and love sport, we want to hear from you.
+          <p class="section-subtitle" data-i18n="careers.subtitle">
+            Wir suchen immer leidenschaftliche Menschen für unser Gastgewerbe- und Serviceteam.
           </p>
 
-          <!-- Open role tags -->
           <div class="careers-roles">
-            <span class="careers-role-tag">Bar Staff</span>
-            <span class="careers-role-tag">Kitchen Team</span>
-            <span class="careers-role-tag">Front of House</span>
-            <span class="careers-role-tag">Event Coordinator</span>
-            <span class="careers-role-tag">Manager</span>
-            <span class="careers-role-tag">Security</span>
+            <span class="careers-role-tag" data-i18n="careers.role.bar">Barteam</span>
+            <span class="careers-role-tag" data-i18n="careers.role.kitchen">Küchenteam</span>
+            <span class="careers-role-tag" data-i18n="careers.role.foh">Service</span>
+            <span class="careers-role-tag" data-i18n="careers.role.events">Eventkoordination</span>
+            <span class="careers-role-tag" data-i18n="careers.role.manager">Management</span>
+            <span class="careers-role-tag" data-i18n="careers.role.security">Sicherheit</span>
           </div>
 
           <a href="careers.html" class="btn btn-primary">
             <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-            View Careers
+            <span data-i18n="careers.cta">Stellenangebote ansehen</span>
           </a>
         </div>
 
@@ -543,93 +620,116 @@
     <div class="container">
 
       <div style="margin-bottom:60px;" data-aos="fade-up">
-        <span class="section-label">Get In Touch</span>
-        <h2 class="section-title" id="contact-title">
-          Contact <span class="text-accent">Us</span>
+        <span class="section-label" data-i18n="contact.label">Kontakt aufnehmen</span>
+        <h2 class="section-title" id="contact-title"
+            data-i18n-html="contact.title">
+          Kontakt<br><span class="text-accent">zu uns</span>
         </h2>
       </div>
 
-      <!-- Two-column: details + form -->
       <div class="contact-layout">
 
         <!-- ── Left: details ── -->
         <div class="contact-details-col" data-aos="fade-right">
 
-          <!-- Brand -->
           <a href="index.html" class="nav-logo" style="margin-bottom:20px; display:inline-flex;">
             <div class="nav-logo-icon">A90</div>
             <span class="nav-logo-text">Arena <span>90</span></span>
           </a>
-          <p style="font-size:0.88rem; color:var(--color-text-muted); line-height:1.7; margin-bottom:28px; max-width:340px;">
-            Arena 90 Sports Bar — your premier destination for live sports,
-            craft drinks, and great food. Bringing fans together since 2018.
+          <p style="font-size:0.88rem; color:var(--color-text-muted); line-height:1.7; margin-bottom:28px; max-width:340px;"
+             data-i18n="contact.brand.text">
+            Arena 90 Sports Bar — Ihr Ziel für Live-Sport, Craft-Drinks und großartiges Essen. Fans vereinen seit 2018.
           </p>
 
           <!-- Social links -->
-          <div class="contact-social" aria-label="Social media links" style="margin-bottom:36px;">
-            <a href="#" aria-label="Follow us on Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
-            <a href="#" aria-label="Follow us on Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
-            <a href="#" aria-label="Follow us on X (Twitter)"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
-            <a href="#" aria-label="Follow us on TikTok"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
-            <a href="#" aria-label="Subscribe on YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+          <div class="contact-social" style="margin-bottom:36px;">
+            <a href="#" data-i18n-aria="aria.social.fb" aria-label="Arena 90 auf Facebook folgen">
+              <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+            </a>
+            <a href="#" data-i18n-aria="aria.social.ig" aria-label="Arena 90 auf Instagram folgen">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="#" data-i18n-aria="aria.social.x" aria-label="Arena 90 auf X (Twitter) folgen">
+              <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="#" data-i18n-aria="aria.social.tt" aria-label="Arena 90 auf TikTok folgen">
+              <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+            </a>
+            <a href="#" data-i18n-aria="aria.social.yt" aria-label="Arena 90 auf YouTube abonnieren">
+              <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+            </a>
           </div>
 
-          <!-- Contact info items -->
+          <!-- Contact details -->
           <div class="contact-list" style="gap:16px; display:flex; flex-direction:column;">
 
             <div class="contact-item">
               <div class="contact-item-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></div>
               <div class="contact-item-text">
-                <span class="contact-item-label">Address</span>
-                <span class="contact-item-value">14 Stadium Road, Sports Quarter<br>New York, NY 10001</span>
+                <span class="contact-item-label" data-i18n="contact.addr.label">Adresse</span>
+                <span class="contact-item-value" data-i18n-html="contact.addr.value">
+                  Stadionstraße 90<br>80809 München
+                </span>
               </div>
             </div>
 
             <div class="contact-item">
               <div class="contact-item-icon"><i class="fa-solid fa-phone" aria-hidden="true"></i></div>
               <div class="contact-item-text">
-                <span class="contact-item-label">Phone</span>
-                <span class="contact-item-value"><a href="tel:+15551234567">+1 (555) 123-4567</a></span>
+                <span class="contact-item-label" data-i18n="contact.phone.label">Telefon</span>
+                <span class="contact-item-value">
+                  <a href="tel:+498912345678">+49 89 12 34 56 78</a>
+                </span>
               </div>
             </div>
 
             <div class="contact-item">
               <div class="contact-item-icon"><i class="fa-regular fa-envelope" aria-hidden="true"></i></div>
               <div class="contact-item-text">
-                <span class="contact-item-label">General</span>
-                <span class="contact-item-value"><a href="mailto:info@arena90bar.com">info@arena90bar.com</a></span>
+                <span class="contact-item-label" data-i18n="contact.gen.label">Allgemein</span>
+                <span class="contact-item-value">
+                  <a href="mailto:info@arena90bar.de">info@arena90bar.de</a>
+                </span>
               </div>
             </div>
 
             <div class="contact-item">
               <div class="contact-item-icon"><i class="fa-regular fa-calendar" aria-hidden="true"></i></div>
               <div class="contact-item-text">
-                <span class="contact-item-label">Reservations</span>
-                <span class="contact-item-value"><a href="mailto:reservations@arena90bar.com">reservations@arena90bar.com</a></span>
+                <span class="contact-item-label" data-i18n="contact.res.label">Reservierungen</span>
+                <span class="contact-item-value">
+                  <a href="mailto:reservierungen@arena90bar.de">reservierungen@arena90bar.de</a>
+                </span>
               </div>
             </div>
 
             <div class="contact-item">
               <div class="contact-item-icon"><i class="fa-solid fa-champagne-glasses" aria-hidden="true"></i></div>
               <div class="contact-item-text">
-                <span class="contact-item-label">Events</span>
-                <span class="contact-item-value"><a href="mailto:events@arena90bar.com">events@arena90bar.com</a></span>
+                <span class="contact-item-label" data-i18n="contact.evt.label">Veranstaltungen</span>
+                <span class="contact-item-value">
+                  <a href="mailto:events@arena90bar.de">events@arena90bar.de</a>
+                </span>
               </div>
             </div>
 
             <div class="contact-item">
               <div class="contact-item-icon"><i class="fa-solid fa-briefcase" aria-hidden="true"></i></div>
               <div class="contact-item-text">
-                <span class="contact-item-label">Careers</span>
-                <span class="contact-item-value"><a href="mailto:careers@arena90bar.com">careers@arena90bar.com</a></span>
+                <span class="contact-item-label" data-i18n="contact.car.label">Karriere</span>
+                <span class="contact-item-value">
+                  <a href="mailto:karriere@arena90bar.de">karriere@arena90bar.de</a>
+                </span>
               </div>
             </div>
 
             <div class="contact-item">
               <div class="contact-item-icon"><i class="fa-solid fa-headset" aria-hidden="true"></i></div>
               <div class="contact-item-text">
-                <span class="contact-item-label">Support</span>
-                <span class="contact-item-value"><a href="mailto:support@arena90bar.com">support@arena90bar.com</a></span>
+                <span class="contact-item-label" data-i18n="contact.sup.label">Support</span>
+                <span class="contact-item-value">
+                  <a href="mailto:support@arena90bar.de">support@arena90bar.de</a>
+                </span>
               </div>
             </div>
 
@@ -639,28 +739,38 @@
         <!-- ── Right: Contact form ── -->
         <div class="contact-form-col" data-aos="fade-left" data-aos-delay="100">
           <div class="contact-form-card">
-            <h3 class="reservation-card-title" style="margin-bottom:6px;">Send a Message</h3>
-            <p class="reservation-card-desc">We read every message and reply within 24 hours.</p>
+            <h3 class="reservation-card-title" style="margin-bottom:6px;"
+                data-i18n="contact.form.title">Nachricht senden</h3>
+            <p class="reservation-card-desc"
+               data-i18n="contact.form.desc">Wir lesen jede Nachricht und antworten innerhalb von 24 Stunden.</p>
 
-            <form class="res-form" id="contactForm" novalidate aria-label="Contact form">
+            <form class="res-form" id="contactForm" novalidate aria-label="Kontaktformular">
 
               <!-- Row: name + email -->
               <div class="form-row">
                 <div class="form-field">
-                  <label class="form-label" for="ct-name">Full Name <span class="form-required">*</span></label>
+                  <label class="form-label" for="ct-name">
+                    <span data-i18n="contact.label.name">Vollständiger Name</span>
+                    <span class="form-required">*</span>
+                  </label>
                   <div class="form-input-wrap">
                     <i class="fa-regular fa-user form-input-icon" aria-hidden="true"></i>
                     <input class="form-input" type="text" id="ct-name" name="name"
-                           placeholder="Jane Smith" autocomplete="name" />
+                           data-i18n-placeholder="contact.ph.name"
+                           placeholder="Max Mustermann" autocomplete="name" />
                   </div>
                   <span class="form-error" role="alert" aria-live="polite"></span>
                 </div>
                 <div class="form-field">
-                  <label class="form-label" for="ct-email">Email <span class="form-required">*</span></label>
+                  <label class="form-label" for="ct-email">
+                    <span data-i18n="contact.label.email">E-Mail-Adresse</span>
+                    <span class="form-required">*</span>
+                  </label>
                   <div class="form-input-wrap">
                     <i class="fa-regular fa-envelope form-input-icon" aria-hidden="true"></i>
                     <input class="form-input" type="email" id="ct-email" name="email"
-                           placeholder="jane@example.com" autocomplete="email" />
+                           data-i18n-placeholder="contact.ph.email"
+                           placeholder="max@beispiel.de" autocomplete="email" />
                   </div>
                   <span class="form-error" role="alert" aria-live="polite"></span>
                 </div>
@@ -668,18 +778,21 @@
 
               <!-- Topic -->
               <div class="form-field">
-                <label class="form-label" for="ct-topic">Topic <span class="form-required">*</span></label>
+                <label class="form-label" for="ct-topic">
+                  <span data-i18n="contact.label.topic">Thema</span>
+                  <span class="form-required">*</span>
+                </label>
                 <div class="form-input-wrap">
                   <i class="fa-solid fa-tag form-input-icon" aria-hidden="true"></i>
                   <select class="form-input form-select" id="ct-topic" name="topic">
-                    <option value="">Select a topic</option>
-                    <option>General Inquiry</option>
-                    <option>Reservation Question</option>
-                    <option>Private Event Inquiry</option>
-                    <option>Menu Information</option>
-                    <option>Feedback &amp; Complaints</option>
-                    <option>Press &amp; Media</option>
-                    <option>Other</option>
+                    <option value="" data-i18n="contact.ph.topic">Thema auswählen</option>
+                    <option data-i18n="contact.topic.general">Allgemeine Anfrage</option>
+                    <option data-i18n="contact.topic.res">Reservierungsfrage</option>
+                    <option data-i18n="contact.topic.event">Veranstaltungsanfrage</option>
+                    <option data-i18n="contact.topic.menu">Speisekarteninformation</option>
+                    <option data-i18n="contact.topic.feedback">Feedback &amp; Beschwerden</option>
+                    <option data-i18n="contact.topic.press">Presse &amp; Medien</option>
+                    <option data-i18n="contact.topic.other">Sonstiges</option>
                   </select>
                 </div>
                 <span class="form-error" role="alert" aria-live="polite"></span>
@@ -687,31 +800,33 @@
 
               <!-- Message -->
               <div class="form-field">
-                <label class="form-label" for="ct-message">Message <span class="form-required">*</span></label>
+                <label class="form-label" for="ct-message">
+                  <span data-i18n="contact.label.message">Nachricht</span>
+                  <span class="form-required">*</span>
+                </label>
                 <div class="form-input-wrap">
                   <i class="fa-regular fa-comment form-input-icon form-input-icon--top" aria-hidden="true"></i>
                   <textarea class="form-input form-textarea" id="ct-message" name="message"
-                            placeholder="How can we help you today?" rows="5"></textarea>
+                            data-i18n-placeholder="contact.ph.message"
+                            placeholder="Wie können wir Ihnen heute helfen?" rows="5"></textarea>
                 </div>
                 <span class="form-error" role="alert" aria-live="polite"></span>
               </div>
 
-              <!-- Char counter -->
               <p class="form-char-count" id="ctMessageCount" aria-live="polite">0 / 1000</p>
 
-              <!-- Submit -->
-              <button type="submit" class="btn btn-primary form-submit-btn" style="width:100%; justify-content:center;">
+              <button type="submit" class="btn btn-primary form-submit-btn"
+                      style="width:100%; justify-content:center;">
                 <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
-                <span class="btn-label">Send Message</span>
+                <span class="btn-label" data-i18n="contact.submit">Nachricht senden</span>
                 <span class="btn-spinner" aria-hidden="true"></span>
               </button>
 
-              <!-- Success message -->
               <div class="form-success" id="ctFormSuccess" role="status" aria-live="polite" hidden>
                 <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
                 <div>
-                  <strong>Message sent!</strong>
-                  <p>Thanks for reaching out. We'll reply within 24 hours.</p>
+                  <strong data-i18n="contact.success.title">Nachricht gesendet!</strong>
+                  <p data-i18n="contact.success.text">Vielen Dank. Wir melden uns innerhalb von 24 Stunden.</p>
                 </div>
               </div>
 
@@ -719,7 +834,7 @@
           </div>
         </div>
 
-      </div><!-- /.contact-layout -->
+      </div>
     </div>
   </section>
 
@@ -727,30 +842,28 @@
   <!-- ═══════════════════════════════════════════════════════════
        FOOTER
   ════════════════════════════════════════════════════════════ -->
-  <footer class="footer" aria-label="Site footer">
+  <footer class="footer" aria-label="Seitenfuß">
     <div class="container">
       <div class="footer-inner">
-
         <p class="footer-copy">
-          &copy; 2025 <span>Arena 90 Sports Bar</span>. All rights reserved.
+          <span data-i18n="footer.copy">© 2025 Arena 90 Sports Bar. Alle Rechte vorbehalten.</span>
         </p>
-
-        <nav class="footer-links" aria-label="Footer navigation">
-          <a href="index.html">Home</a>
-          <a href="menu.html">Menu</a>
-          <a href="careers.html">Careers</a>
-          <a href="imprint.html">Imprint / Legal</a>
-          <a href="mailto:info@arena90bar.com">Contact</a>
+        <nav class="footer-links" aria-label="Footer-Navigation">
+          <a href="index.html"   data-i18n="footer.home">Startseite</a>
+          <a href="menu.html"    data-i18n="footer.menu">Speisekarte</a>
+          <a href="careers.html" data-i18n="footer.careers">Karriere</a>
+          <a href="imprint.html" data-i18n="footer.imprint">Impressum</a>
+          <a href="mailto:info@arena90bar.de" data-i18n="footer.contact">Kontakt</a>
         </nav>
-
       </div>
     </div>
   </footer>
 
 
+  <!-- Translations (must load before main script) -->
+  <script src="translations.js"></script>
   <!-- AOS Library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-
   <!-- Main Script -->
   <script src="script.js"></script>
 
