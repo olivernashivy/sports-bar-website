@@ -305,6 +305,44 @@ ul {
   font-size: 0.82rem;
 }
 
+/* Language toggle */
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 3px;
+  flex-shrink: 0;
+  margin-right: 4px;
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  color: var(--color-text-dim);
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background var(--transition-fast), color var(--transition-fast);
+  line-height: 1;
+}
+
+.lang-btn.active {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.lang-btn:hover:not(.active) {
+  color: var(--color-text);
+  background: rgba(255,255,255,0.06);
+}
+
 /* Mobile hamburger */
 .nav-toggle {
   display: none;
@@ -351,18 +389,13 @@ ul {
   overflow: hidden;
 }
 
-/* Hero background using CSS gradient (placeholder) */
+/* Hero background — image set via inline style on the element */
 .hero-bg {
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(
-      135deg,
-      rgba(13, 13, 13, 0.95) 0%,
-      rgba(20, 10, 5, 0.88) 50%,
-      rgba(13, 13, 13, 0.85) 100%
-    ),
-    url('https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?w=1800&auto=format&fit=crop&q=80') center/cover no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   z-index: 0;
 }
 
@@ -747,14 +780,9 @@ ul {
 .reservation-bg {
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(
-      135deg,
-      rgba(13, 13, 13, 0.97) 0%,
-      rgba(50, 20, 5, 0.94) 60%,
-      rgba(13, 13, 13, 0.97) 100%
-    ),
-    url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600&auto=format&fit=crop&q=80') center/cover no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   z-index: 0;
 }
 

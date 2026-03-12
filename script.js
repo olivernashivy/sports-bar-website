@@ -9,6 +9,9 @@
 /* ─── AOS Initialization ─────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
 
+  // Language detection + toggle (translations.js must load first)
+  if (window.i18n) window.i18n.init();
+
   // Animate On Scroll
   AOS.init({
     duration: 700,
@@ -25,6 +28,19 @@ document.addEventListener('DOMContentLoaded', () => {
   initCardHoverTilt();
   initForms();
 });
+
+/* ─── i18n helper (safe wrapper used by form validator) ─────────
+   Falls back gracefully if translations.js isn't loaded          */
+function tr(key, vars) {
+  if (!window.i18n) return key;
+  let s = window.i18n.get(key);
+  if (vars) {
+    Object.entries(vars).forEach(([k, v]) => {
+      s = s.replace('{' + k + '}', v);
+    });
+  }
+  return s;
+}
 
 
 /* ─── Navigation: Scroll state + Mobile toggle ───────────────── */
@@ -255,25 +271,25 @@ function initForms() {
 
   /* ── Validators ─────────────────────────────────────────────── */
   const rules = {
-    required: (v) => v.trim() !== '' || 'This field is required.',
-    email:    (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) || 'Please enter a valid email address.',
-    phone:    (v) => /^[\d\s\+\-\(\)]{7,20}$/.test(v.trim()) || 'Please enter a valid phone number.',
-    guests:   (v) => {
+    required:   (v) => v.trim() !== '' || tr('err.required'),
+    email:      (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) || tr('err.email'),
+    phone:      (v) => /^[\d\s\+\-\(\)]{7,20}$/.test(v.trim()) || tr('err.phone'),
+    guests:     (v) => {
       const n = parseInt(v, 10);
-      if (isNaN(n) || n < 1) return 'Please enter at least 1 guest.';
-      if (n > 40)             return 'Maximum party size is 40. Contact us for larger events.';
+      if (isNaN(n) || n < 1) return tr('err.guests.min');
+      if (n > 40)             return tr('err.guests.max');
       return true;
     },
     futureDate: (v) => {
-      if (!v) return 'Please select a date.';
+      if (!v) return tr('err.date.empty');
       const selected = new Date(v);
       const today    = new Date();
       today.setHours(0, 0, 0, 0);
-      return selected >= today || 'Please choose today or a future date.';
+      return selected >= today || tr('err.date.future');
     },
-    select: (v) => (v && v !== '') || 'Please select an option.',
-    minLength: (min) => (v) =>
-      v.trim().length >= min || `Please enter at least ${min} characters.`,
+    select:     (v) => (v && v !== '') || tr('err.select'),
+    minLength:  (min) => (v) =>
+      v.trim().length >= min || tr('err.minlength', { min }),
   };
 
   /* ── Field validation helper ────────────────────────────────── */

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Imprint and Legal Information — Arena 90 Sports Bar." />
-  <title>Imprint / Legal — Arena 90 Sports Bar</title>
+  <meta name="description" content="Impressum und rechtliche Informationen — Arena 90 Sports Bar GmbH, München." />
+  <title>Impressum — Arena 90 Sports Bar München</title>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,27 +23,30 @@
 <body>
 
   <!-- ─── Navigation ──────────────────────────────────────────── -->
-  <nav class="nav scrolled" id="nav" aria-label="Main navigation">
+  <nav class="nav scrolled" id="nav" aria-label="Hauptnavigation">
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo" aria-label="Arena 90 Sports Bar Home">
+      <a href="index.html" class="nav-logo" aria-label="Arena 90 Sports Bar">
         <div class="nav-logo-icon">A90</div>
         <span class="nav-logo-text">Arena <span>90</span></span>
       </a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html#about">About</a></li>
-        <li><a href="menu.html">Menu</a></li>
-        <li><a href="index.html#reservation">Reservations</a></li>
-        <li><a href="careers.html">Careers</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="index.html#about"       data-i18n="nav.about">Über uns</a></li>
+        <li><a href="menu.html"              data-i18n="nav.menu">Speisekarte</a></li>
+        <li><a href="index.html#reservation" data-i18n="nav.res">Reservierungen</a></li>
+        <li><a href="careers.html"           data-i18n="nav.careers">Karriere</a></li>
+        <li><a href="index.html#contact"     data-i18n="nav.contact">Kontakt</a></li>
         <li>
-          <a href="mailto:reservations@arena90bar.com?subject=Table Reservation"
-             class="btn btn-primary nav-cta">
+          <a href="index.html#reservation" class="btn btn-primary nav-cta">
             <i class="fa-regular fa-calendar" aria-hidden="true"></i>
-            Book a Table
+            <span data-i18n="nav.book">Tisch buchen</span>
           </a>
         </li>
       </ul>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <div class="lang-toggle" id="langToggle" role="group" aria-label="Sprache / Language">
+        <button class="lang-btn" data-lang="de" aria-pressed="true">DE</button>
+        <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Navigation ein-/ausblenden" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -51,16 +54,33 @@
 
 
   <!-- ─── Subpage Hero ─────────────────────────────────────────── -->
-  <section class="subpage-hero" style="min-height:38vh;" aria-label="Imprint page hero">
-    <div class="subpage-hero-bg"></div>
+  <section class="subpage-hero" style="min-height:34vh;" aria-label="Impressum">
+    <div class="subpage-hero-bg"
+         style="background-image:
+           linear-gradient(135deg,rgba(13,13,13,0.97) 0%,rgba(20,10,5,0.94) 100%),
+           url('https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?w=1200&auto=format&fit=crop&q=80');
+           background-size:cover; background-position:center;">
+    </div>
     <div class="container subpage-hero-content">
-      <span class="section-label" data-aos="fade-up">Legal</span>
+      <span class="section-label" data-aos="fade-up">Rechtliches</span>
       <h1 class="section-title" data-aos="fade-up" data-aos-delay="80"
           style="font-size: clamp(2.4rem,6vw,5rem);">
-        Imprint &amp; <span class="text-accent">Legal Notice</span>
+        Impressum &amp; <span class="text-accent">Datenschutz</span>
       </h1>
     </div>
   </section>
+
+
+  <!-- ─── Bilingual toggle notice ──────────────────────────────── -->
+  <div style="background:var(--color-bg-alt); border-bottom:1px solid var(--color-border); padding:14px 0;">
+    <div class="container" style="display:flex; align-items:center; gap:12px;">
+      <i class="fa-solid fa-language" style="color:var(--color-accent); font-size:1rem;" aria-hidden="true"></i>
+      <p style="font-size:0.82rem; color:var(--color-text-muted);">
+        <span class="de-text">Diese Seite ist auf Deutsch. Wechseln Sie oben rechts zu Englisch.</span>
+        <span class="en-text" hidden>This page is in German. Switch to English using the toggle above.</span>
+      </p>
+    </div>
+  </div>
 
 
   <!-- ─── Imprint Content ──────────────────────────────────────── -->
@@ -68,144 +88,247 @@
     <div class="container">
       <div class="imprint-body" data-aos="fade-up">
 
-        <h2 id="imprint-title">Legal Information</h2>
-        <p>
-          This website is operated by Arena 90 Sports Bar LLC. The following information
-          constitutes the legal imprint of this website as required by applicable law.
-        </p>
+        <!-- ═══ GERMAN VERSION ═══ -->
+        <div class="de-text">
 
-        <hr />
+          <h2 id="imprint-title">Impressum</h2>
+          <p>Angaben gemäß § 5 TMG (Telemediengesetz)</p>
 
-        <h2>Company Information</h2>
-        <address>
-          <strong>Arena 90 Sports Bar LLC</strong><br />
-          14 Stadium Road<br />
-          Sports Quarter<br />
-          New York, NY 10001<br />
-          United States of America
-        </address>
+          <h2>Unternehmensangaben</h2>
+          <address>
+            <strong>Arena 90 Sports Bar GmbH</strong><br />
+            Stadionstraße 90<br />
+            80809 München<br />
+            Deutschland
+          </address>
 
-        <h2>Contact</h2>
-        <p>
-          Phone: <a href="tel:+15551234567">+1 (555) 123-4567</a><br />
-          General: <a href="mailto:info@arena90bar.com">info@arena90bar.com</a><br />
-          Reservations: <a href="mailto:reservations@arena90bar.com">reservations@arena90bar.com</a><br />
-          Events: <a href="mailto:events@arena90bar.com">events@arena90bar.com</a><br />
-          Careers: <a href="mailto:careers@arena90bar.com">careers@arena90bar.com</a><br />
-          Support: <a href="mailto:support@arena90bar.com">support@arena90bar.com</a>
-        </p>
+          <h2>Kontakt</h2>
+          <p>
+            Telefon: <a href="tel:+498912345678">+49 89 12 34 56 78</a><br />
+            Allgemein: <a href="mailto:info@arena90bar.de">info@arena90bar.de</a><br />
+            Reservierungen: <a href="mailto:reservierungen@arena90bar.de">reservierungen@arena90bar.de</a><br />
+            Veranstaltungen: <a href="mailto:events@arena90bar.de">events@arena90bar.de</a><br />
+            Karriere: <a href="mailto:karriere@arena90bar.de">karriere@arena90bar.de</a><br />
+            Support: <a href="mailto:support@arena90bar.de">support@arena90bar.de</a>
+          </p>
 
-        <h2>Business Registration</h2>
-        <p>
-          Arena 90 Sports Bar LLC is registered in the State of New York, USA.<br />
-          Registration Number: [Placeholder — to be completed by client]<br />
-          Tax Identification Number (EIN): [Placeholder — to be completed by client]<br />
-          State Liquor License No.: [Placeholder — to be completed by client]
-        </p>
+          <h2>Handelsregister</h2>
+          <p>
+            Registergericht: Amtsgericht München<br />
+            Handelsregisternummer: HRB [Platzhalter — wird vom Kunden ergänzt]<br />
+            Umsatzsteuer-Identifikationsnummer gemäß § 27 a UStG: DE [Platzhalter]
+          </p>
 
-        <h2>Management</h2>
-        <p>
-          Managing Director: [Name — to be completed by client]<br />
-          General Manager: [Name — to be completed by client]
-        </p>
+          <h2>Geschäftsführung</h2>
+          <p>
+            Geschäftsführer: [Name — wird vom Kunden ergänzt]
+          </p>
 
-        <hr />
+          <h2>Gastgewerbeerlaubnis</h2>
+          <p>
+            Erlaubnisbehörde: Landeshauptstadt München, Kreisverwaltungsreferat<br />
+            Gaststättenerlaubnis Nr.: [Platzhalter — wird vom Kunden ergänzt]
+          </p>
 
-        <h2>Disclaimer</h2>
-        <p>
-          The contents of this website have been created with the utmost care. However,
-          Arena 90 Sports Bar LLC cannot guarantee the accuracy, completeness, or
-          timeliness of the content. As a service provider, we are responsible for our
-          own content on these pages under general law.
-        </p>
-        <p>
-          We are not obligated to monitor transmitted or stored third-party information
-          or to investigate circumstances that indicate illegal activity. Obligations to
-          remove or block the use of information under general law remain unaffected.
-          Any liability in this regard is only possible from the point in time at which
-          knowledge of a specific infringement becomes known.
-        </p>
+          <hr />
 
-        <h2>Links to External Websites</h2>
-        <p>
-          Our website may contain links to external websites of third parties over whose
-          content we have no influence. Therefore, we cannot assume any liability for
-          these external contents. The respective provider or operator of the linked
-          pages is always responsible for the content of the linked pages.
-        </p>
+          <h2>Haftungsausschluss</h2>
+          <p>
+            Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit,
+            Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.
+            Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten
+            nach den allgemeinen Gesetzen verantwortlich.
+          </p>
+          <p>
+            Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte
+            oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die
+            auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung
+            der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt.
+          </p>
 
-        <h2>Copyright</h2>
-        <p>
-          The content and works on these pages created by the site operators are subject
-          to applicable copyright law. Duplication, processing, distribution, or any form
-          of commercialisation of such material beyond the scope of the copyright law shall
-          require the prior written consent of its respective author or creator.
-        </p>
-        <p>
-          Downloads and copies of this site are only permitted for private, non-commercial
-          use. Insofar as the content on this site was not created by the operator, the
-          copyrights of third parties are respected. In particular, third-party content
-          is marked as such. Should you become aware of a copyright infringement, please
-          inform us accordingly. Upon notification of violations, we will remove such
-          content immediately.
-        </p>
+          <h2>Haftung für Links</h2>
+          <p>
+            Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen
+            Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen.
+            Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der
+            Seiten verantwortlich.
+          </p>
 
-        <hr />
+          <h2>Urheberrecht</h2>
+          <p>
+            Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen
+            dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der
+            Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung
+            des jeweiligen Autors bzw. Erstellers.
+          </p>
 
-        <h2>Privacy Policy</h2>
-        <p>
-          Arena 90 Sports Bar LLC takes the protection of your personal data seriously.
-          We treat your personal data confidentially and in accordance with applicable
-          data protection regulations.
-        </p>
-        <p>
-          This website does not collect personal data beyond standard server log files
-          (IP address, date/time of access, pages visited) which are retained for a
-          maximum of 30 days for security and operational purposes.
-        </p>
-        <p>
-          When you contact us by email, the information you provide (name, email address,
-          and message content) will be stored for the purpose of processing your inquiry
-          and in case of follow-up questions. We do not share this information with
-          third parties without your consent.
-        </p>
+          <hr />
 
-        <h2>Cookies</h2>
-        <p>
-          This website does not use tracking cookies or analytics services. Standard
-          browser caching mechanisms may be used to improve performance.
-        </p>
+          <h2>Datenschutzerklärung</h2>
+          <p>
+            Der Schutz Ihrer persönlichen Daten ist uns ein besonderes Anliegen. Wir verarbeiten Ihre
+            Daten daher ausschließlich auf Grundlage der gesetzlichen Bestimmungen, insbesondere der
+            Datenschutz-Grundverordnung (DSGVO) und des Telemediengesetzes (TMG).
+          </p>
 
-        <h2>Your Rights</h2>
-        <p>
-          You have the right to receive information about your stored personal data,
-          its origin, and recipients, as well as the purpose of data processing free
-          of charge at any time. You also have the right to request the correction,
-          blocking, or deletion of this data. To exercise these rights, please contact
-          us at <a href="mailto:info@arena90bar.com">info@arena90bar.com</a>.
-        </p>
+          <h2>Verantwortlicher (Art. 4 Nr. 7 DSGVO)</h2>
+          <address>
+            Arena 90 Sports Bar GmbH<br />
+            Stadionstraße 90, 80809 München<br />
+            E-Mail: <a href="mailto:datenschutz@arena90bar.de">datenschutz@arena90bar.de</a>
+          </address>
 
-        <hr />
+          <h2>Erhebung und Verarbeitung personenbezogener Daten</h2>
+          <p>
+            Wenn Sie unsere Website besuchen, speichert unser Webserver temporär folgende Daten:
+            IP-Adresse des anfragenden Computers, Datum und Uhrzeit des Zugriffs, Name und URL der
+            abgerufenen Datei sowie das verwendete Betriebssystem. Diese Daten werden ausschließlich
+            zur Gewährleistung eines störungsfreien Betriebs der Website sowie zur Verbesserung unseres
+            Angebots ausgewertet und ermöglichen uns keine Rückschlüsse auf Ihre Person.
+          </p>
+          <p>
+            Wenn Sie uns per Kontaktformular oder E-Mail kontaktieren, werden Ihre angegebenen Daten
+            (Name, E-Mail-Adresse, Nachricht) zwecks Bearbeitung der Anfrage und für den Fall von
+            Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
+          </p>
 
-        <h2>Responsible for Content</h2>
-        <p>
-          Responsible for the content of this website pursuant to applicable law:<br />
-          Arena 90 Sports Bar LLC<br />
-          14 Stadium Road, Sports Quarter, New York, NY 10001
-        </p>
+          <h2>Ihre Rechte</h2>
+          <p>
+            Ihnen stehen grundsätzlich die Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung,
+            Datenübertragbarkeit und Widerspruch zu. Wenn Sie glauben, dass die Verarbeitung Ihrer Daten
+            gegen das Datenschutzrecht verstößt oder Ihre datenschutzrechtlichen Ansprüche sonst in einer
+            Weise verletzt worden sind, können Sie sich bei der Aufsichtsbehörde beschweren:
+          </p>
+          <p>
+            Bayerisches Landesamt für Datenschutzaufsicht (BayLDA)<br />
+            Promenade 18, 91522 Ansbach<br />
+            <a href="https://www.lda.bayern.de" target="_blank" rel="noopener">www.lda.bayern.de</a>
+          </p>
 
-        <h2>Dispute Resolution</h2>
-        <p>
-          The European Commission provides a platform for online dispute resolution
-          (ODR): <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">
-          https://ec.europa.eu/consumers/odr</a>. Our email address can be found above
-          in the contact section. We are not willing or obliged to participate in
-          dispute resolution proceedings before a consumer arbitration board.
-        </p>
+          <h2>Cookies</h2>
+          <p>
+            Diese Website setzt ausschließlich technisch notwendige Cookies ein (z.B. Spracheinstellung).
+            Es werden keine Tracking-Cookies oder Analyse-Dienste von Drittanbietern eingesetzt.
+          </p>
 
-        <p style="color:var(--color-text-dim); font-size:0.8rem; margin-top:40px;">
-          Last updated: March 2025
-        </p>
+          <h2>EU-Streitschlichtung</h2>
+          <p>
+            Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:
+            <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">
+              https://ec.europa.eu/consumers/odr</a>.<br />
+            Unsere E-Mail-Adresse finden Sie oben im Impressum. Wir sind nicht bereit oder verpflichtet,
+            an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+          </p>
+
+          <p style="color:var(--color-text-dim); font-size:0.8rem; margin-top:40px;">
+            Stand: März 2025
+          </p>
+
+        </div><!-- /.de-text -->
+
+
+        <!-- ═══ ENGLISH VERSION ═══ -->
+        <div class="en-text" hidden>
+
+          <h2 id="imprint-title-en">Legal Notice (Impressum)</h2>
+          <p>Information pursuant to § 5 TMG (German Telemedia Act)</p>
+
+          <h2>Company Information</h2>
+          <address>
+            <strong>Arena 90 Sports Bar GmbH</strong><br />
+            Stadionstraße 90<br />
+            80809 Munich<br />
+            Germany
+          </address>
+
+          <h2>Contact</h2>
+          <p>
+            Phone: <a href="tel:+498912345678">+49 89 12 34 56 78</a><br />
+            General: <a href="mailto:info@arena90bar.de">info@arena90bar.de</a><br />
+            Reservations: <a href="mailto:reservierungen@arena90bar.de">reservierungen@arena90bar.de</a><br />
+            Events: <a href="mailto:events@arena90bar.de">events@arena90bar.de</a><br />
+            Careers: <a href="mailto:karriere@arena90bar.de">karriere@arena90bar.de</a><br />
+            Support: <a href="mailto:support@arena90bar.de">support@arena90bar.de</a>
+          </p>
+
+          <h2>Commercial Register</h2>
+          <p>
+            Registry Court: Amtsgericht München<br />
+            Registration Number: HRB [Placeholder — to be completed by client]<br />
+            VAT Identification Number: DE [Placeholder]
+          </p>
+
+          <h2>Managing Director</h2>
+          <p>[Name — to be completed by client]</p>
+
+          <hr />
+
+          <h2>Disclaimer</h2>
+          <p>
+            The contents of this website have been created with the utmost care. We cannot
+            guarantee the accuracy, completeness, or timeliness of the content. As a service
+            provider, we are responsible for our own content on these pages under general law
+            pursuant to § 7 para. 1 TMG.
+          </p>
+
+          <h2>Copyright</h2>
+          <p>
+            The content and works created by the site operators on these pages are subject to
+            German copyright law. Duplication, processing, distribution, or any form of
+            commercialisation beyond the scope of copyright law requires the prior written
+            consent of the respective author or creator.
+          </p>
+
+          <hr />
+
+          <h2>Privacy Policy</h2>
+          <p>
+            The protection of your personal data is important to us. We process your data
+            exclusively on the basis of applicable legal provisions, in particular the
+            General Data Protection Regulation (GDPR) and the German Telemedia Act (TMG).
+          </p>
+
+          <h2>Data Controller (Art. 4 No. 7 GDPR)</h2>
+          <address>
+            Arena 90 Sports Bar GmbH<br />
+            Stadionstraße 90, 80809 Munich, Germany<br />
+            Email: <a href="mailto:datenschutz@arena90bar.de">datenschutz@arena90bar.de</a>
+          </address>
+
+          <h2>Data Collection</h2>
+          <p>
+            When you contact us via the contact form or email, the data you provide (name,
+            email address, message) will be stored for the purpose of processing your inquiry.
+            We do not share this data without your consent. Standard server logs (IP address,
+            access time) are retained for up to 30 days for security purposes only.
+          </p>
+
+          <h2>Your Rights</h2>
+          <p>
+            You have the right to access, correct, delete, restrict, and object to the processing
+            of your personal data. To exercise these rights, contact us at
+            <a href="mailto:datenschutz@arena90bar.de">datenschutz@arena90bar.de</a>.
+            You may also lodge a complaint with the Bavarian Data Protection Authority (BayLDA).
+          </p>
+
+          <h2>Cookies</h2>
+          <p>
+            This website uses only technically necessary cookies (e.g. language preference).
+            No third-party tracking or analytics cookies are used.
+          </p>
+
+          <h2>Online Dispute Resolution</h2>
+          <p>
+            The European Commission provides an Online Dispute Resolution (ODR) platform:
+            <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">
+              https://ec.europa.eu/consumers/odr</a>.
+          </p>
+
+          <p style="color:var(--color-text-dim); font-size:0.8rem; margin-top:40px;">
+            Last updated: March 2025
+          </p>
+
+        </div><!-- /.en-text -->
 
       </div>
     </div>
@@ -213,23 +336,25 @@
 
 
   <!-- ─── Footer ───────────────────────────────────────────────── -->
-  <footer class="footer" aria-label="Site footer">
+  <footer class="footer" aria-label="Seitenfuß">
     <div class="container">
       <div class="footer-inner">
         <p class="footer-copy">
-          &copy; 2025 <span>Arena 90 Sports Bar</span>. All rights reserved.
+          <span data-i18n="footer.copy">© 2025 Arena 90 Sports Bar. Alle Rechte vorbehalten.</span>
         </p>
-        <nav class="footer-links" aria-label="Footer navigation">
-          <a href="index.html">Home</a>
-          <a href="menu.html">Menu</a>
-          <a href="careers.html">Careers</a>
-          <a href="imprint.html">Imprint / Legal</a>
-          <a href="mailto:info@arena90bar.com">Contact</a>
+        <nav class="footer-links" aria-label="Footer-Navigation">
+          <a href="index.html"   data-i18n="footer.home">Startseite</a>
+          <a href="menu.html"    data-i18n="footer.menu">Speisekarte</a>
+          <a href="careers.html" data-i18n="footer.careers">Karriere</a>
+          <a href="imprint.html" data-i18n="footer.imprint">Impressum</a>
+          <a href="mailto:info@arena90bar.de" data-i18n="footer.contact">Kontakt</a>
         </nav>
       </div>
     </div>
   </footer>
 
+  <!-- Translations -->
+  <script src="translations.js"></script>
   <!-- AOS Library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <!-- Main Script -->
